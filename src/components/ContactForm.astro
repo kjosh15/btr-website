@@ -1,0 +1,96 @@
+---
+type Field = {
+  id: string;
+  label: string;
+  type: string;
+  required?: boolean;
+};
+
+const {
+  id,
+  form,
+}: {
+  id: string;
+  form: {
+    title: string;
+    description?: string;
+    submitLabel: string;
+    action?: string;
+    fields: Field[];
+  };
+} = Astro.props;
+---
+<section id={id} class="bg-white py-16 transition" data-form-section>
+  <div class="mx-auto max-w-3xl space-y-8 px-6">
+    <div class="space-y-3">
+      <h3 class="text-2xl font-semibold text-btr-text">
+        {form.title}
+      </h3>
+      {form.description && (
+        <p class="text-base text-btr-text/75">
+          {form.description}
+        </p>
+      )}
+    </div>
+    <form
+      method="post"
+      action={form.action ?? '#'}
+      class="space-y-6 rounded-2xl border border-btr-muted bg-btr-muted/40 p-6 shadow-sm"
+    >
+      {form.fields.map((field) => (
+        <div class="space-y-2">
+          <label class="block text-sm font-medium text-btr-text" for={`${id}-${field.id}`}>
+            {field.label}
+            {field.required && <span class="text-btr-accent"> *</span>}
+          </label>
+          {field.type === 'textarea' ? (
+            <textarea
+              id={`${id}-${field.id}`}
+              name={field.id}
+              required={field.required}
+              class="w-full rounded-lg border border-btr-muted bg-white px-4 py-3 text-sm shadow-sm outline-none transition focus:border-btr-accent focus:ring-2 focus:ring-btr-accent/30"
+              rows={4}
+            />
+          ) : (
+            <input
+              id={`${id}-${field.id}`}
+              name={field.id}
+              type={field.type}
+              required={field.required}
+              class="w-full rounded-lg border border-btr-muted bg-white px-4 py-3 text-sm shadow-sm outline-none transition focus:border-btr-accent focus:ring-2 focus:ring-btr-accent/30"
+            />
+          )}
+        </div>
+      ))}
+      <button
+        type="submit"
+        class="inline-flex items-center justify-center rounded-full bg-btr-cta px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-btr-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
+      >
+        {form.submitLabel}
+      </button>
+      <p class="text-xs text-btr-text/60">
+        Forms are not yet connected to a delivery service. Update the form action once infrastructure is ready.
+      </p>
+    </form>
+  </div>
+</section>
+<script client:load>
+  const sectionId = ${JSON.stringify(id)};
+  const section = document.getElementById(sectionId);
+  if (section) {
+    const highlight = () => {
+      section.classList.add('ring-2', 'ring-btr-accent/30', 'ring-offset-2');
+      window.setTimeout(() => {
+        section.classList.remove('ring-2', 'ring-btr-accent/30', 'ring-offset-2');
+      }, 2200);
+    };
+    if (window.location.hash === '#' + sectionId) {
+      window.requestAnimationFrame(() => highlight());
+    }
+    window.addEventListener('hashchange', () => {
+      if (window.location.hash === '#' + sectionId) {
+        highlight();
+      }
+    });
+  }
+</script>

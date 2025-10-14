@@ -1,0 +1,45 @@
+---
+type Cta = {
+  label: string;
+  href: string;
+  variant?: string;
+  external?: boolean;
+};
+
+const { ctas = [], align = 'start' }: { ctas: Cta[]; align?: 'start' | 'center' | 'end' } = Astro.props;
+
+const alignment =
+  align === 'center'
+    ? 'justify-center'
+    : align === 'end'
+      ? 'justify-end'
+      : 'justify-start';
+
+const baseClasses =
+  'inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent';
+
+const variantClasses = (variant?: string) => {
+  switch (variant) {
+    case 'secondary':
+      return 'bg-btr-accent/10 text-btr-accent hover:bg-btr-accent/20';
+    case 'outline':
+      return 'border border-btr-accent text-btr-accent hover:bg-btr-accent hover:text-white';
+    default:
+      return 'bg-btr-accent text-white hover:bg-btr-accent-muted';
+  }
+};
+---
+{ctas.length > 0 && (
+  <div class={`flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:${alignment}`}>
+    {ctas.map((cta) => (
+      <a
+        href={cta.href}
+        class={`${baseClasses} ${variantClasses(cta.variant)}`}
+        target={cta.external ? '_blank' : undefined}
+        rel={cta.external ? 'noopener noreferrer' : undefined}
+      >
+        {cta.label}
+      </a>
+    ))}
+  </div>
+)}

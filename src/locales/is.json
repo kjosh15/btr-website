@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "BTR — [TODO] Fullveldis-AI lausnir",
+    "description": "[TODO] Setjið inn íslenska lýsingu þegar þýðing liggur fyrir."
+  },
+  "nav": [
+    { "id": "hero", "label": "[TODO] Yfirlit" },
+    { "id": "why", "label": "[TODO] Af hverju" },
+    { "id": "process", "label": "[TODO] Ferli" },
+    { "id": "proof", "label": "[TODO] Sannanir" },
+    { "id": "governments", "label": "[TODO] Fyrir stjórnvöld" },
+    { "id": "partners", "label": "[TODO] Fyrir samstarfsaðila" },
+    { "id": "about", "label": "[TODO] Um" },
+    { "id": "experience", "label": "[TODO] Reynslan" },
+    { "id": "final-cta", "label": "[TODO] Hafðu samband" }
+  ],
+  "headerCta": "[TODO] Bóka kynningu",
+  "langToggle": {
+    "label": "English",
+    "ariaLabel": "Skipta yfir á ensku"
+  },
+  "forms": {
+    "government": {
+      "title": "[TODO] Bóka kynningu fyrir stjórnvöld",
+      "description": "[TODO] Lýsing verður bætt við síðar.",
+      "action": "#",
+      "submitLabel": "[TODO] Senda",
+      "fields": []
+    },
+    "partner": {
+      "title": "[TODO] Hefja samstarf við BTR",
+      "description": "[TODO] Lýsing verður bætt við síðar.",
+      "action": "#",
+      "submitLabel": "[TODO] Senda",
+      "fields": []
+    }
+  },
+  "footer": {
+    "contactHeading": "[TODO] Hafa samband",
+    "contact": [
+      { "label": "[TODO] Ríkisverkefni", "href": "mailto:gov@btr.is" },
+      { "label": "[TODO] Samstarf", "href": "mailto:partners@btr.is" },
+      { "label": "[TODO] Almennar fyrirspurnir", "href": "mailto:hello@btr.is" }
+    ],
+    "legal": [
+      { "label": "[TODO] Persónuvernd", "href": "#" },
+      { "label": "[TODO] Skilmálar", "href": "#" }
+    ],
+    "copyright": "© BTR ehf"
+  }
+}

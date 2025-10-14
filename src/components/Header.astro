@@ -1,0 +1,122 @@
+---
+import LangToggle from './LangToggle.astro';
+
+const {
+  navItems = [],
+  locale,
+  currentLang = 'en',
+  alternate,
+} = Astro.props;
+---
+<header class="sticky top-0 z-50 border-b border-btr-muted bg-white/90 backdrop-blur">
+  <div class="relative mx-auto max-w-6xl px-6 py-5">
+    <div class="flex items-center justify-between gap-6">
+      <a href="#hero" class="text-lg font-semibold text-btr-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent">
+        BTR
+      </a>
+      <nav class="hidden items-center gap-6 text-sm font-medium text-btr-text/80 md:flex">
+        {navItems.map((item) => (
+          <a
+            href={`#${item.id}`}
+            class="transition-colors hover:text-btr-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+      <div class="flex items-center gap-3">
+        <LangToggle
+          currentLang={currentLang}
+          alternateLang={alternate.lang}
+          alternateHref={alternate.href}
+          label={locale.langToggle.label}
+          ariaLabel={locale.langToggle.ariaLabel}
+        />
+      </div>
+    </div>
+    <nav class="mt-4 flex flex-wrap gap-4 text-sm font-medium text-btr-text/80 md:hidden">
+      {navItems.map((item) => (
+        <a
+          href={`#${item.id}`}
+          class="rounded-full bg-btr-muted/80 px-4 py-2 transition hover:bg-btr-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+      <div class="flex items-center gap-3">
+        <a
+          href="#government-briefing"
+          class="hidden rounded-full bg-btr-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-btr-accent-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent md:inline-flex"
+        >
+          {locale?.headerCta ?? 'Request Briefing'}
+        </a>
+        <LangToggle
+          currentLang={currentLang}
+          alternateLang={alternate.lang}
+          alternateHref={alternate.href}
+          label={locale.langToggle.label}
+          ariaLabel={locale.langToggle.ariaLabel}
+        />
+        <button
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-btr-muted bg-white text-btr-text transition hover:border-btr-accent hover:text-btr-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent md:hidden"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          data-nav-toggle
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <nav
+      class="absolute left-0 right-0 top-full hidden border-b border-btr-muted bg-white/95 px-6 py-6 text-sm font-medium text-btr-text/80 shadow-sm md:static md:flex md:border-none md:bg-transparent md:p-0 md:shadow-none"
+      data-nav-panel
+    >
+      <div class="mx-auto flex w-full max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
+        <div class="grid gap-2 md:flex md:flex-wrap md:gap-4">
+          {navItems.map((item) => (
+            <a
+              href={`#${item.id}`}
+              class="rounded-full px-4 py-2 transition-colors hover:bg-btr-muted/80 hover:text-btr-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent md:rounded-none md:px-0 md:py-0 md:hover:bg-transparent"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+        <a
+          href="#government-briefing"
+          class="inline-flex items-center justify-center rounded-full bg-btr-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-btr-accent-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent md:hidden"
+        >
+          {locale?.headerCta ?? 'Request Briefing'}
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+<script client:load>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const panel = document.querySelector('[data-nav-panel]');
+  if (toggle && panel) {
+    const close = () => {
+      panel.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    toggle.addEventListener('click', () => {
+      const isOpen = panel.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', (!isOpen).toString());
+      toggle.classList.toggle('border-btr-accent', !isOpen);
+      toggle.classList.toggle('text-btr-accent', !isOpen);
+    });
+    panel.querySelectorAll('a').forEach((link) =>
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) {
+          close();
+        }
+      }),
+    );
+  }
+</script>

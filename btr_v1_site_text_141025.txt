@@ -1,0 +1,178 @@
+# BTR.is — Final Single-Page Website Draft
+
+## Hero
+
+**Headline**
+Designing Sovereign AI Strategies for Nations and Organizations
+
+**Subhead**
+BTR helps governments and institutions define how AI should serve their people—turning national context into clear, buildable strategies that trusted partners can execute.
+We focus on strategy first, run pilots where they validate or refine strategy, and guide implementation through aligned partners.
+
+**Primary CTAs**
+
+* Request a Government Briefing
+* Partner With BTR
+* Download One-Page Overview *(PDF link)*
+
+**Support line**
+*Proven in Iceland. Expanding globally.*
+
+**Design notes**
+Full-width hero with light neutral gradient, minimal motion, calm authority. CTAs stack vertically on mobile.
+
+---
+
+## Why Sovereign AI Matters Now
+
+**Heading**
+Every nation needs a strategy before it builds.
+
+**Key context**
+
+* Over **120 countries** have published or are drafting AI strategies, yet fewer than half have begun structured implementation (OECD, 2024).
+* Only **10% of public-sector AI projects** achieve measurable outcomes without a guiding strategy (World Bank, 2023).
+* **Data governance and vendor lock-in** are cited as top risks by **70% of digital ministries** worldwide (UN E-Government Survey, 2024).
+* Meanwhile, **private-sector AI adoption** is accelerating, widening the capability gap for nations without coherent frameworks.
+
+**Consequence**
+Without a clear strategy, governments risk fragmented deployments, dependency on external vendors, and loss of control over data and decision systems.
+
+**Callout (visual)**
+
+> **Strategy is the system.**
+> Pilots should serve strategy—not replace it.
+
+---
+
+## Our Strategic Process
+
+**Heading**
+Turning context into clarity—and clarity into code.
+
+**Intro**
+BTR specializes in the upstream and sustaining phases of Sovereign AI—ensuring every build is anchored in strategy.
+We remain engaged through validation and adaptation so that strategy becomes a living system, not a static plan.
+
+**Five steps**
+
+1. **Discover** – Map national priorities, governance, and capabilities.
+2. **Define** – Translate insight into a strategic specification that guides implementation.
+3. **Partner** – Align ministries and vendors to execute collaboratively against the spec.
+4. **Validate** – Run tightly scoped pilots to test, prove, and refine strategy.
+5. **Sustain** – Evolve and govern AI systems as enduring national assets.
+
+**Quote box**
+
+> “We do pilots to prove strategy—not the other way around.”
+
+---
+
+## Proof of Approach
+
+**Heading**
+From pilots to national impact.
+
+**Iceland**
+Coordinating the **AI for Educators pilot** with the Ministry of Education and leading technology partners—creating one of the first national frameworks for responsible AI use in classrooms.
+The pilot’s design and partnerships are now informing broader conversations on Sovereign AI and public-sector innovation across Iceland.
+
+**Zanzibar**
+Contributing to the **design of a national AI strategy and capacity roadmap**, helping define how Sovereign AI principles can support sustainable digital transformation in emerging economies.
+
+**CTA**
+**Download the Sovereign AI Model (PDF)**
+
+---
+
+## For Governments
+
+**Heading**
+Your independent strategy partner for AI leadership.
+
+**Copy**
+BTR works with ministries and multilateral bodies to define how AI can be safely, ethically, and productively integrated into governance, education, and industry.
+We create living strategic frameworks that reduce risk, align stakeholders, and ensure benefits last long after pilots end.
+
+**Benefits**
+
+* Strategy-first roadmap grounded in national priorities
+* Clear specifications vendors can execute
+* Independent, vendor-neutral guidance
+* Ongoing advisory to sustain and evolve strategy
+
+**CTA**
+**Book a Government Strategy Session**
+
+---
+
+## For Technology and Institutional Partners
+
+**Heading**
+Where strategy meets implementation.
+
+**Copy**
+BTR connects partners with clearly defined, government-backed opportunities.
+Our strategic specifications remove ambiguity, streamline engagement, and ensure pilots contribute directly to measurable national outcomes.
+
+**Benefits**
+
+* Government-backed use cases with defined specs
+* Transparent collaboration and evaluation process
+* Coordinated ministry engagement
+* Long-term visibility and alignment
+
+**CTA**
+**Start a Partnership Conversation**
+
+---
+
+## About BTR
+
+**Heading**
+Who We Are
+
+**Copy**
+BTR was founded by strategist **Josh Klein**, a global advisor with over two decades of experience bridging technology, policy, and organizational transformation.
+His work spans Fortune 500 companies, government ministries, and world-leading AI partners.
+
+**Mission statement**
+
+> To ensure every country and organization can design, govern, and benefit from AI on its own terms.
+
+---
+
+## Experience That Built BTR
+
+**Heading**
+Experience That Built BTR
+
+**Subhead**
+Our foundation draws on collaborations across technology, education, and public policy. These experiences built the methodology and credibility behind BTR’s sovereign AI frameworks.
+
+**Caption**
+*Selected prior collaborations through Josh Klein’s independent consulting practice.*
+
+**Design notes**
+Grayscale carousel of 15–25 logos, slow loop, equal sizing, pause on hover.
+Placed before final CTA as closing proof.
+
+---
+
+## Final CTA
+
+**Heading**
+Work With BTR
+
+**Copy**
+BTR delivers strategy as a continuous practice—discovering truth on the ground, defining actionable frameworks, validating with pilots, and guiding implementation with trusted partners.
+Whether designing a national AI roadmap or advising a global organization, we turn context into clarity and clarity into code.
+
+**Buttons**
+
+* Request a Government Briefing
+* Partner With BTR
+* Download One-Page Overview (PDF)
+
+**Footer line**
+BTR operates internationally, helping governments and organizations build sovereign, ethical, and effective AI strategies.

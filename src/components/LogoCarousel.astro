@@ -1,0 +1,45 @@
+---
+type Logo = {
+  name: string;
+  file?: string;
+};
+
+const { logos = [] }: { logos: Logo[] } = Astro.props;
+---
+<div class="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6">
+  {logos.length ? (
+    <div class="flex animate-[slide_45s_linear_infinite] gap-10 opacity-80 hover:opacity-100">
+      {logos.concat(logos).map((logo, index) => (
+        <figure class="flex min-w-[140px] flex-col items-center gap-3 text-center text-xs uppercase tracking-wide text-white/70">
+          {logo.file ? (
+            <img
+              src={`/logos/${logo.file}`}
+              alt={logo.name}
+              class="h-10 w-auto opacity-80 transition-opacity hover:opacity-100"
+              loading={index > logos.length ? 'lazy' : 'eager'}
+            />
+          ) : (
+            <span class="inline-flex h-10 items-center rounded-full border border-white/20 px-6 text-white/70">
+              {logo.name}
+            </span>
+          )}
+        </figure>
+      ))}
+    </div>
+  ) : (
+    <div class="text-center text-sm text-white/70">
+      Add SVG or PNG logos to <code class="rounded bg-white/10 px-1">public/logos</code> and list them in the content frontmatter.
+    </div>
+  )}
+</div>
+
+<style>
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>

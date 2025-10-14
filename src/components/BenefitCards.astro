@@ -1,0 +1,30 @@
+---
+const {
+  items = [],
+  variant = 'neutral',
+}: { items: string[]; variant?: 'gov' | 'partner' | 'neutral' } = Astro.props;
+
+const accentClass =
+  variant === 'gov'
+    ? 'bg-btr-accent'
+    : variant === 'partner'
+      ? 'bg-btr-accent-muted'
+      : 'bg-btr-accent';
+
+const borderClass =
+  variant === 'gov'
+    ? 'border-btr-accent/25 bg-btr-accent/5'
+    : variant === 'partner'
+      ? 'border-btr-accent-muted/25 bg-btr-accent-muted/5'
+      : 'border-btr-accent/15 bg-white/85';
+---
+{items.length > 0 && (
+  <ul class="grid list-none gap-4 sm:grid-cols-2">
+    {items.map((item) => (
+      <li class={`flex items-start gap-4 rounded-3xl border p-5 text-sm leading-relaxed text-btr-text/80 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:shadow-md ${borderClass}`}>
+        <span class={`mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full ${accentClass}`}></span>
+        <span>{item}</span>
+      </li>
+    ))}
+  </ul>
+)}

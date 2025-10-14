@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "BTR — Designing Sovereign AI Strategies",
+    "description": "BTR partners with governments and institutions to design Sovereign AI strategies, align pilots, and guide implementation with trusted partners."
+  },
+  "nav": [
+    { "id": "hero", "label": "Overview" },
+    { "id": "why", "label": "Why" },
+    { "id": "process", "label": "Process" },
+    { "id": "proof", "label": "Proof" },
+    { "id": "governments", "label": "For Governments" },
+    { "id": "partners", "label": "For Partners" },
+    { "id": "about", "label": "About" },
+    { "id": "experience", "label": "Experience" },
+    { "id": "final-cta", "label": "Get in Touch" }
+  ],
+  "headerCta": "Request Briefing",
+  "langToggle": {
+    "label": "Íslenska",
+    "ariaLabel": "Switch to Icelandic"
+  },
+  "forms": {
+    "government": {
+      "title": "Request a Government Briefing",
+      "description": "Share a few details so we can prepare contextually relevant material.",
+      "action": "#",
+      "submitLabel": "Send Request",
+      "fields": [
+        { "id": "name", "label": "Name", "type": "text", "required": true },
+        { "id": "role", "label": "Role / Title", "type": "text", "required": true },
+        { "id": "organization", "label": "Ministry or Organization", "type": "text", "required": true },
+        { "id": "email", "label": "Work Email", "type": "email", "required": true },
+        { "id": "timeline", "label": "Decision timeline", "type": "text", "required": false },
+        { "id": "context", "label": "Context or focus areas", "type": "textarea", "required": false }
+      ]
+    },
+    "partner": {
+      "title": "Partner With BTR",
+      "description": "Introduce your team so we can assess alignment with current Sovereign AI initiatives.",
+      "action": "#",
+      "submitLabel": "Submit Interest",
+      "fields": [
+        { "id": "name", "label": "Name", "type": "text", "required": true },
+        { "id": "company", "label": "Organization", "type": "text", "required": true },
+        { "id": "email", "label": "Work Email", "type": "email", "required": true },
+        { "id": "capabilities", "label": "Core capabilities", "type": "textarea", "required": true },
+        { "id": "regions", "label": "Regions of operation", "type": "text", "required": false },
+        { "id": "notes", "label": "Relevant experience or notes", "type": "textarea", "required": false }
+      ]
+    }
+  },
+  "footer": {
+    "contactHeading": "Contact",
+    "contact": [
+      { "label": "Government intake", "href": "mailto:gov@btr.is" },
+      { "label": "Partner intake", "href": "mailto:partners@btr.is" },
+      { "label": "General inquiries", "href": "mailto:hello@btr.is" }
+    ],
+    "legal": [
+      { "label": "Privacy", "href": "#" },
+      { "label": "Terms", "href": "#" }
+    ],
+    "copyright": "© BTR ehf"
+  }
+}

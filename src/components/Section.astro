@@ -1,0 +1,39 @@
+---
+const {
+  id,
+  eyebrow,
+  heading,
+  support,
+  children,
+  background = 'light',
+} = Astro.props;
+
+const backgroundClass =
+  background === 'muted'
+    ? 'bg-btr-muted'
+    : background === 'accent'
+      ? 'bg-btr-cta text-white'
+      : 'bg-white';
+const headingClass = background === 'accent' ? 'text-white' : 'text-btr-text';
+const eyebrowClass = background === 'accent' ? 'text-white/70' : 'text-btr-text/60';
+const supportClass =
+  background === 'accent' ? 'text-base text-white/80' : 'text-base text-btr-text/80';
+const contentClass =
+  background === 'accent'
+    ? 'rich-text mt-8 space-y-6 text-base leading-relaxed text-white/85 [&_*:not(code)]:text-inherit [&_strong]:text-white'
+    : 'rich-text mt-8 space-y-6 text-base leading-relaxed text-btr-text';
+---
+<section id={id} class={`${backgroundClass} py-16 sm:py-20`}>
+  <div class="mx-auto max-w-6xl px-6">
+    {(eyebrow || heading || support) && (
+      <div class="max-w-2xl space-y-4">
+        {eyebrow && <p class={`text-xs font-semibold uppercase tracking-widest ${eyebrowClass}`}>{eyebrow}</p>}
+        {heading && <h2 class={`text-3xl font-semibold leading-tight ${headingClass}`}>{heading}</h2>}
+        {support && <p class={supportClass}>{support}</p>}
+      </div>
+    )}
+    <div class={contentClass}>
+      <slot />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const {
+  lang = 'en',
+  locale,
+  navItems,
+  alternate,
+  meta,
+} = Astro.props;
+
+const pageTitle = meta?.title ?? locale.meta?.title ?? 'BTR';
+const pageDescription = meta?.description ?? locale.meta?.description ?? '';
+---
+<!DOCTYPE html>
+<html lang={lang} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    {pageDescription && <meta name="description" content={pageDescription} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Inter:wght@500;600&display=swap"
+    />
+    <slot name="head" />
+  </head>
+  <body class="antialiased">
+    <a
+      href="#main-content"
+      class="absolute left-1/2 top-3 -translate-x-1/2 rounded-full bg-btr-accent px-5 py-3 text-sm font-medium text-white focus:translate-y-0 focus:outline-none"
+    >
+      Skip to main content
+    </a>
+    <Header
+      navItems={navItems}
+      locale={locale}
+      currentLang={lang}
+      alternate={alternate}
+    />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+    <slot name="scripts" />
+  </body>
+</html>
