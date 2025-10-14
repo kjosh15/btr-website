@@ -5,68 +5,50 @@ const { data } = Astro.props;
 ---
 <section
   id="hero"
-  class="relative overflow-hidden bg-gradient-to-br from-white via-white to-btr-muted py-24"
+  class="relative overflow-hidden border-b border-btr-muted bg-white py-24"
 >
-  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(31,117,203,0.14),_transparent_55%)]"></div>
-  <div class="relative mx-auto max-w-6xl px-6">
-    <div class="overflow-hidden rounded-3xl border border-white/60 bg-white/80 p-10 shadow-xl backdrop-blur-md lg:p-16">
-      <div class="grid gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:items-start">
-        <div class="space-y-8">
-          <p class="text-xs font-semibold uppercase tracking-[0.35em] text-btr-text/50">
-            Sovereign AI Strategy
-          </p>
-          <h1 class="text-4xl font-semibold leading-tight text-btr-text sm:text-5xl">
-            {data.headline}
-          </h1>
-          <p class="text-lg text-btr-text/80 sm:text-xl">
-            {data.subheadline}
-          </p>
-          <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-            <CtaGroup ctas={data.primaryCtas} />
-            <p class="text-sm font-medium text-btr-text/60 sm:text-base">
-              {data.supportLine}
-            </p>
-          </div>
-        </div>
-        <aside class="flex flex-col gap-6 rounded-3xl border border-btr-accent/15 bg-gradient-to-br from-btr-accent/6 via-white/70 to-btr-accent/10 p-8 text-sm leading-relaxed text-btr-text/80 shadow-sm">
-          <div>
-            <p class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-accent">
-              How we engage
-            </p>
-            <p class="mt-3 text-base font-medium text-btr-text">
-              Strategy, pilots, and partners move as one programme—anchored in sovereign priorities.
-            </p>
-          </div>
-          <dl class="grid gap-4 rounded-2xl bg-white/70 p-4 text-sm text-btr-text/70 sm:grid-cols-3">
-            <div>
-              <dt class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-text/45">Countries</dt>
-              <dd class="mt-1 text-2xl font-semibold text-btr-accent">120+</dd>
-            </div>
-            <div>
-              <dt class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-text/45">Partners</dt>
-              <dd class="mt-1 text-2xl font-semibold text-btr-accent">15+</dd>
-            </div>
-            <div>
-              <dt class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-text/45">Advisory</dt>
-              <dd class="mt-1 text-2xl font-semibold text-btr-accent">20 yrs</dd>
-            </div>
-          </dl>
-          <ul class="list-none space-y-4 pt-2">
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-btr-accent"></span>
-              <span>Strategy-first frameworks grounded in national objectives and context.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-btr-accent"></span>
-              <span>Pilots that validate strategy through evidence before scaling.</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-btr-accent"></span>
-              <span>Implementation partners aligned to transparent specifications and governance.</span>
-            </li>
-          </ul>
-        </aside>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(31,117,203,0.12),_transparent_60%)]"></div>
+  <div class="relative mx-auto max-w-5xl px-6">
+    <div class="space-y-8">
+      <div class="inline-flex items-center rounded-full bg-btr-muted px-3 py-1 text-xs font-medium uppercase tracking-[0.28em] text-btr-text/65">
+        Designing Sovereign AI Strategies
       </div>
+      <h1 class="text-4xl font-semibold leading-snug text-btr-text sm:text-[2.8rem] sm:leading-tight">
+        {data.headline}
+      </h1>
+      <p class="text-lg leading-relaxed text-btr-text/80 sm:text-xl">
+        {data.subheadline}
+      </p>
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+        <CtaGroup ctas={data.primaryCtas} align="start" />
+        <p class="text-sm font-medium text-btr-text/60">
+          {data.supportLine}
+        </p>
+      </div>
+    </div>
+    <div class="mt-12 grid gap-8 rounded-3xl border border-btr-muted bg-btr-muted/35 p-8 text-sm leading-relaxed text-btr-text/75 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
+      <div class="space-y-4">
+        <h2 class="text-base font-semibold text-btr-text">
+          Strategy, pilots, and partners stay in lockstep.
+        </h2>
+        <p>
+          We translate national priorities into living specifications, validate with evidence-driven pilots, and coordinate trusted partners without sacrificing sovereign control.
+        </p>
+      </div>
+      <dl class="grid gap-6 sm:grid-cols-3">
+        <div class="space-y-2">
+          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Countries</dt>
+          <dd class="text-3xl font-semibold text-btr-accent">120+</dd>
+        </div>
+        <div class="space-y-2">
+          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Trusted partners</dt>
+          <dd class="text-3xl font-semibold text-btr-accent">15+</dd>
+        </div>
+        <div class="space-y-2">
+          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Years advising</dt>
+          <dd class="text-3xl font-semibold text-btr-accent">20</dd>
+        </div>
+      </dl>
     </div>
   </div>
 </section>

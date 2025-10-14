@@ -7,34 +7,37 @@ const {
   ariaLabel,
 } = Astro.props;
 
-const preferenceKey = 'btr-lang-preference';
 ---
 <a
   href={alternateHref}
   data-lang-toggle
   data-target-lang={alternateLang}
+  data-current-lang={currentLang}
   class="inline-flex items-center gap-2 rounded-full border border-btr-accent px-4 py-2 text-sm font-medium text-btr-accent transition-colors hover:bg-btr-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
   aria-label={ariaLabel}
 >
   {label}
 </a>
 <script client:load>
-  const preferenceKey = {JSON.stringify(preferenceKey)};
-  const currentLang = {JSON.stringify(currentLang)};
-  const alternateLangValue = {JSON.stringify(alternateLang)};
-  const alternateHrefValue = {JSON.stringify(alternateHref)};
+  const preferenceKey = 'btr-lang-preference';
+  const toggles = Array.from(document.querySelectorAll('[data-lang-toggle]'));
 
-  const stored = localStorage.getItem(preferenceKey);
-  if (!stored) {
-    localStorage.setItem(preferenceKey, currentLang);
-  } else if (stored !== currentLang && stored === alternateLangValue) {
-    window.location.replace(alternateHrefValue);
-  }
+  toggles.forEach((toggle) => {
+    const currentLang = toggle.dataset.currentLang;
+    const targetLang = toggle.dataset.targetLang;
+    const targetHref = toggle.getAttribute('href');
 
-  const toggle = document.querySelector('[data-lang-toggle]');
-  if (toggle) {
+    if (!currentLang || !targetLang || !targetHref) return;
+
+    const stored = localStorage.getItem(preferenceKey);
+    if (!stored) {
+      localStorage.setItem(preferenceKey, currentLang);
+    } else if (stored !== currentLang && stored === targetLang) {
+      window.location.replace(targetHref);
+    }
+
     toggle.addEventListener('click', () => {
-      localStorage.setItem(preferenceKey, alternateLangValue);
+      localStorage.setItem(preferenceKey, targetLang);
     });
-  }
+  });
 </script>

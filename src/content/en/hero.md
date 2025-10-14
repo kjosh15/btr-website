@@ -10,9 +10,6 @@ primaryCtas:
   - label: Request a Government Briefing
     href: "#government-briefing"
     variant: primary
-  - label: Partner With BTR
-    href: "#partner-intake"
-    variant: secondary
   - label: Download One-Page Overview
     href: "/pdfs/BTR_OnePage_Overview.pdf"
     variant: outline

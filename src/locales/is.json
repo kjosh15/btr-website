@@ -5,14 +5,11 @@
   },
   "nav": [
     { "id": "hero", "label": "[TODO] Yfirlit" },
-    { "id": "why", "label": "[TODO] Af hverju" },
-    { "id": "process", "label": "[TODO] Ferli" },
+    { "id": "process", "label": "[TODO] Nálgun" },
     { "id": "proof", "label": "[TODO] Sannanir" },
-    { "id": "governments", "label": "[TODO] Fyrir stjórnvöld" },
-    { "id": "partners", "label": "[TODO] Fyrir samstarfsaðila" },
-    { "id": "about", "label": "[TODO] Um" },
-    { "id": "experience", "label": "[TODO] Reynslan" },
-    { "id": "final-cta", "label": "[TODO] Hafðu samband" }
+    { "id": "offerings", "label": "[TODO] Getur" },
+    { "id": "about", "label": "[TODO] Teimið" },
+    { "id": "engage", "label": "[TODO] Hafðu samband" }
   ],
   "headerCta": "[TODO] Bóka kynningu",
   "langToggle": {

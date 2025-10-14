@@ -1,0 +1,35 @@
+---
+type Audience = {
+  title: string;
+  summary: string;
+  points: string[];
+};
+
+const { audiences = [] }: { audiences: Audience[] } = Astro.props;
+---
+{audiences.length > 0 && (
+  <div class="grid gap-6 lg:grid-cols-2">
+    {audiences.map((audience, index) => (
+      <article
+        class={`h-full rounded-2xl border p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md ${index === 0 ? 'border-btr-accent/25 bg-btr-accent/5' : 'border-btr-muted bg-white/90'}`}
+      >
+        <h3 class="text-lg font-semibold text-btr-text">
+          {audience.title}
+        </h3>
+        <p class="mt-3 text-sm leading-relaxed text-btr-text/75">
+          {audience.summary}
+        </p>
+        {audience.points?.length > 0 && (
+          <ul class="mt-5 space-y-3 pl-0 text-sm text-btr-text/80">
+            {audience.points.map((point) => (
+              <li class="flex items-start gap-3">
+                <span class={`mt-2 inline-flex h-1 w-6 shrink-0 rounded-full ${index === 0 ? 'bg-btr-accent' : 'bg-btr-accent/50'}`}></span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </article>
+    ))}
+  </div>
+)}

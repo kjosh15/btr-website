@@ -16,12 +16,12 @@ const alignment =
       : 'justify-start';
 
 const baseClasses =
-  'inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent';
+  'inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent';
 
 const variantClasses = (variant?: string) => {
   switch (variant) {
     case 'secondary':
-      return 'bg-btr-accent/10 text-btr-accent hover:bg-btr-accent/20';
+      return 'border border-btr-muted bg-white text-btr-text hover:border-btr-accent hover:text-btr-accent';
     case 'outline':
       return 'border border-btr-accent text-btr-accent hover:bg-btr-accent hover:text-white';
     default:
@@ -30,7 +30,7 @@ const variantClasses = (variant?: string) => {
 };
 ---
 {ctas.length > 0 && (
-  <div class={`flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:${alignment}`}>
+  <div class={`flex flex-col gap-3 sm:flex-row sm:flex-nowrap sm:items-center sm:gap-4 ${alignment === 'center' ? 'sm:justify-center' : alignment === 'end' ? 'sm:justify-end' : 'sm:justify-start'}`}>
     {ctas.map((cta) => (
       <a
         href={cta.href}

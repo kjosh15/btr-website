@@ -74,26 +74,16 @@
   }
 
   .rich-text > ul {
-    display: grid;
-    gap: 0.75rem;
-    padding-left: 0;
-  }
-
-  .rich-text > ul li {
-    position: relative;
+    margin: 1rem 0;
+    list-style: disc;
     padding-left: 1.5rem;
   }
 
-  .rich-text > ul li::before {
-    content: '';
-    position: absolute;
-    left: 0.15rem;
-    top: 0.55rem;
-    background-color: theme('colors.btr-accent');
-    opacity: 0.75;
+  .rich-text > ul li {
+    margin-bottom: 0.75rem;
   }
 
   .surface-card {
-    @apply rounded-3xl border border-btr-accent/15 bg-white/85 p-8 shadow-sm backdrop-blur;
+    @apply rounded-3xl border border-btr-muted bg-white p-7 shadow-sm;
   }
 }

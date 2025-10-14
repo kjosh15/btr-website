@@ -8,9 +8,6 @@ primaryCtas:
   - label: "[TODO] Bóka kynningu fyrir stjórnvöld"
     href: "#government-briefing"
     variant: primary
-  - label: "[TODO] Hefja samstarf"
-    href: "#partner-intake"
-    variant: secondary
   - label: "[TODO] Sækja yfirlit (PDF)"
     href: "/pdfs/BTR_OnePage_Overview.pdf"
     variant: outline

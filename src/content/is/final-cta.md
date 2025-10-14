@@ -1,17 +1,20 @@
 ---
-section: final-cta
-eyebrow: "[TODO] Lokakall"
-heading: "[TODO] Vinna með BTR"
-ctas:
-  - label: "[TODO] Bóka kynningu fyrir stjórnvöld"
+section: engage
+eyebrow: "[TODO] Næstu skref"
+heading: "[TODO] Veldu hvernig þú vinnur með BTR"
+actions:
+  - title: "[TODO] Ríkiskynning"
+    summary: "[TODO] Lýsing verður bætt við."
+    ctaLabel: "[TODO] Hefja beiðni"
     href: "#government-briefing"
-    variant: primary
-  - label: "[TODO] Hefja samstarf við BTR"
+  - title: "[TODO] Samstarf"
+    summary: "[TODO] Lýsing verður bætt við."
+    ctaLabel: "[TODO] Kynna teymið"
     href: "#partner-intake"
-    variant: secondary
-  - label: "[TODO] Sækja yfirlit (PDF)"
+  - title: "[TODO] Yfirlit"
+    summary: "[TODO] Lýsing verður bætt við."
+    ctaLabel: "[TODO] Hala niður (PDF)"
     href: "/pdfs/BTR_OnePage_Overview.pdf"
-    variant: outline
     external: true
 ---
-[TODO] Replace with Icelandic closing copy once finalized.
+[TODO] Bæta við íslenskri lýsingu þegar texti liggur fyrir.

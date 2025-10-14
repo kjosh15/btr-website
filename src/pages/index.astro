@@ -10,27 +10,24 @@ import ContactForm from '../components/ContactForm.astro';
 import StatsGrid from '../components/StatsGrid.astro';
 import StepsTimeline from '../components/StepsTimeline.astro';
 import CaseGrid from '../components/CaseGrid.astro';
-import BenefitCards from '../components/BenefitCards.astro';
+import OfferingsColumns from '../components/OfferingsColumns.astro';
+import EngageCards from '../components/EngageCards.astro';
 import locale from '../locales/en.json';
 
 const hero = await getEntryBySlug('en', 'hero');
 const why = await getEntryBySlug('en', 'why');
 const process = await getEntryBySlug('en', 'process');
 const proof = await getEntryBySlug('en', 'proof');
-const gov = await getEntryBySlug('en', 'gov');
-const partners = await getEntryBySlug('en', 'partners');
+const offerings = await getEntryBySlug('en', 'offerings');
 const about = await getEntryBySlug('en', 'about');
-const experience = await getEntryBySlug('en', 'experience');
-const finalCta = await getEntryBySlug('en', 'final-cta');
+const engage = await getEntryBySlug('en', 'final-cta');
 
 const { Content: WhyContent } = await why.render();
 const { Content: ProcessContent } = await process.render();
 const { Content: ProofContent } = await proof.render();
-const { Content: GovContent } = await gov.render();
-const { Content: PartnersContent } = await partners.render();
+const { Content: OfferingsContent } = await offerings.render();
 const { Content: AboutContent } = await about.render();
-const { Content: ExperienceContent } = await experience.render();
-const { Content: FinalCtaContent } = await finalCta.render();
+const { Content: EngageContent } = await engage.render();
 
 const navItems = locale.nav;
 const alternate = { lang: 'is', href: './is/' };
@@ -45,23 +42,17 @@ const alternate = { lang: 'is', href: './is/' };
     background="muted"
   >
     {why.data.stats && <StatsGrid stats={why.data.stats} />}
-    <div class="grid gap-8 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:items-start">
-      <div class="space-y-6">
-        <WhyContent />
-      </div>
+    <div class="mt-8 space-y-6">
+      <WhyContent />
       {(why.data.calloutTitle || why.data.calloutBody) && (
-        <aside class="rounded-3xl border border-btr-accent/15 bg-white/80 p-6 shadow-sm backdrop-blur">
+        <blockquote class="rounded-2xl border border-btr-accent/20 bg-white/90 p-6 text-base font-medium text-btr-text/85">
           {why.data.calloutTitle && (
-            <p class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-accent">
+            <span class="block text-xs font-semibold uppercase tracking-[0.3em] text-btr-accent">
               {why.data.calloutTitle}
-            </p>
+            </span>
           )}
-          {why.data.calloutBody && (
-            <p class="mt-3 text-base font-medium text-btr-text/85">
-              {why.data.calloutBody}
-            </p>
-          )}
-        </aside>
+          {why.data.calloutBody}
+        </blockquote>
       )}
     </div>
   </Section>
@@ -70,12 +61,12 @@ const alternate = { lang: 'is', href: './is/' };
     id={process.data.section}
     eyebrow={process.data.eyebrow}
     heading={process.data.heading}
-    background="white"
+  >
     <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:items-start">
       <div class="space-y-6">
         <ProcessContent />
         {process.data.quote && (
-          <blockquote class="rounded-3xl border border-btr-accent/20 bg-btr-muted/60 p-6 text-lg font-medium text-btr-text/85">
+          <blockquote class="rounded-3xl border border-btr-accent/15 bg-btr-muted/40 p-6 text-base font-medium text-btr-text/80">
             “{process.data.quote}”
           </blockquote>
         )}
@@ -90,61 +81,28 @@ const alternate = { lang: 'is', href: './is/' };
     heading={proof.data.heading}
     background="muted"
   >
-    <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-start">
-      <div class="space-y-6">
-        <ProofContent />
-        {proof.data.cta && <CtaGroup ctas={[proof.data.cta]} />}
-      </div>
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
+      <ProofContent />
       {proof.data.cases && <CaseGrid cases={proof.data.cases} />}
     </div>
-
+    {proof.data.cta && (
+      <div class="mt-8">
+        <CtaGroup ctas={[proof.data.cta]} />
+      </div>
+    )}
   </Section>
 
   <Section
-    id={gov.data.section}
-    eyebrow={gov.data.eyebrow}
-    heading={gov.data.heading}
+    id={offerings.data.section}
+    eyebrow={offerings.data.eyebrow}
+    heading={offerings.data.heading}
   >
-    <div class="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
-      <div class="space-y-6">
-        <GovContent />
-        {gov.data.cta && <CtaGroup ctas={[gov.data.cta]} />}
+    <OfferingsContent />
+    {offerings.data.audiences && (
+      <div class="mt-10">
+        <OfferingsColumns audiences={offerings.data.audiences} />
       </div>
-      {gov.data.benefits && (
-        <div class="surface-card">
-          <p class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-text/55">
-            What governments gain
-          </p>
-          <div class="mt-5">
-            <BenefitCards items={gov.data.benefits} variant="gov" />
-          </div>
-        </div>
-      )}
-    </div>
-  </Section>
-
-  <Section
-    id={partners.data.section}
-    eyebrow={partners.data.eyebrow}
-    heading={partners.data.heading}
-    background="muted"
-  >
-    <div class="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:items-start">
-      <div class="space-y-6">
-        <PartnersContent />
-        {partners.data.cta && <CtaGroup ctas={[partners.data.cta]} />}
-      </div>
-      {partners.data.benefits && (
-        <div class="surface-card">
-          <p class="text-xs font-semibold uppercase tracking-[0.32em] text-btr-text/55">
-            What partners gain
-          </p>
-          <div class="mt-5">
-            <BenefitCards items={partners.data.benefits} variant="partner" />
-          </div>
-        </div>
-      )}
-    </div>
+    )}
   </Section>
 
   <Section
@@ -153,27 +111,25 @@ const alternate = { lang: 'is', href: './is/' };
     heading={about.data.heading}
   >
     <AboutContent />
+    {about.data.logos && (
+      <div class="mt-10 rounded-3xl border border-btr-muted bg-btr-muted/50 p-6">
+        <LogoCarousel logos={about.data.logos} />
+      </div>
+    )}
   </Section>
 
   <Section
-    id={experience.data.section}
-    eyebrow={experience.data.eyebrow}
-    heading={experience.data.heading}
-    support={experience.data.caption}
-    background="accent"
-  >
-    <ExperienceContent />
-    <LogoCarousel logos={experience.data.logos ?? []} />
-  </Section>
-
-  <Section
-    id={finalCta.data.section}
-    eyebrow={finalCta.data.eyebrow}
-    heading={finalCta.data.heading}
+    id={engage.data.section}
+    eyebrow={engage.data.eyebrow}
+    heading={engage.data.heading}
     background="muted"
   >
-    <FinalCtaContent />
-    {finalCta.data.ctas && <CtaGroup ctas={finalCta.data.ctas} />}
+    <EngageContent />
+    {engage.data.actions && (
+      <div class="mt-8">
+        <EngageCards actions={engage.data.actions} />
+      </div>
+    )}
   </Section>
 
   <ContactForm id="government-briefing" form={locale.forms.government} />

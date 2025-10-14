@@ -15,5 +15,6 @@ steps:
   - title: Sustain
     description: Govern AI systems as enduring national assets with continuous adaptation, measurement, and accountability.
 ---
-BTR specializes in the upstream and sustaining phases of Sovereign AI—ensuring every build is anchored in strategy. We remain
-engaged through validation and adaptation so that strategy becomes a living system, not a static plan.
+BTR specializes in the upstream and sustaining phases of Sovereign AI—ensuring every build is anchored in strategy. We stay embedded from discovery through scale so strategy becomes a living system, not a static plan.
+
+We work shoulder-to-shoulder with ministries, delivery partners, and civic stakeholders, translating national objectives into specifications that hold up during implementation. Every phase feeds the next, creating a single programme where learning, governance, and delivery stay aligned.

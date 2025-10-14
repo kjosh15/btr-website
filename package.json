@@ -10,10 +10,11 @@
     "lint": "astro check"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.15.5",
-    "tailwindcss": "^3.4.13",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.14.5",
+    "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
-    "autoprefixer": "^10.4.20"
-  }
+    "tailwindcss": "^3.4.13"
+  },
+  "astro": {}
 }

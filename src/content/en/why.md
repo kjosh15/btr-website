@@ -12,8 +12,8 @@ stats:
   - value: "70%"
     label: "of digital ministries cite data governance and vendor lock-in as top risks"
     source: "UN E-Government Survey, 2024"
-  - value: "Private sector"
-    label: "AI adoption continues to accelerate, widening the capability gap"
+  - value: "2×"
+    label: "Acceleration of private-sector AI adoption year over year"
 calloutTitle: Strategy is the system.
 calloutBody: Pilots should serve strategy—not replace it.
 ---

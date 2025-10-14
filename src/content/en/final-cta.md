@@ -1,19 +1,20 @@
 ---
-section: final-cta
-eyebrow: Final CTA
-heading: Work With BTR
-ctas:
-  - label: Request a Government Briefing
+section: engage
+eyebrow: Next steps
+heading: Choose how to engage with BTR
+actions:
+  - title: Request a government strategy briefing
+    summary: We prepare a tailored session for ministries or multilateral teams based on your current priorities and timelines.
+    ctaLabel: Start briefing request
     href: "#government-briefing"
-    variant: primary
-  - label: Partner With BTR
+  - title: Explore partnership alignment
+    summary: Share how your organisation supports sovereign AI delivery so we can identify live opportunities and fit.
+    ctaLabel: Introduce your team
     href: "#partner-intake"
-    variant: secondary
-  - label: Download One-Page Overview
+  - title: Review the Sovereign AI overview
+    summary: Download the concise briefing that outlines our approach, focus areas, and model for national implementation.
+    ctaLabel: Download overview (PDF)
     href: "/pdfs/BTR_OnePage_Overview.pdf"
-    variant: outline
     external: true
 ---
-BTR delivers strategy as a continuous practice—discovering truth on the ground, defining actionable frameworks, validating with pilots, and guiding implementation with trusted partners. Whether designing a national AI roadmap or advising a global organization, we turn context into clarity and clarity into code.
-
-BTR operates internationally, helping governments and organizations build sovereign, ethical, and effective AI strategies.
+BTR delivers sovereign AI strategy as a continuous practice—discovering truth on the ground, defining actionable frameworks, validating with pilots, and guiding implementation with trusted partners. Whether designing a national roadmap or advising a global organisation, we turn context into clarity and clarity into code.

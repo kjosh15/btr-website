@@ -75,22 +75,24 @@ const {
   </div>
 </section>
 <script client:load>
-  const sectionId = ${JSON.stringify(id)};
-  const section = document.getElementById(sectionId);
-  if (section) {
-    const highlight = () => {
-      section.classList.add('ring-2', 'ring-btr-accent/30', 'ring-offset-2');
-      window.setTimeout(() => {
-        section.classList.remove('ring-2', 'ring-btr-accent/30', 'ring-offset-2');
-      }, 2200);
-    };
-    if (window.location.hash === '#' + sectionId) {
-      window.requestAnimationFrame(() => highlight());
+  const sections = Array.from(document.querySelectorAll('[data-form-section]'));
+
+  const highlight = (section) => {
+    section.classList.add('ring-2', 'ring-btr-accent/30', 'ring-offset-2');
+    window.setTimeout(() => {
+      section.classList.remove('ring-2', 'ring-btr-accent/30', 'ring-offset-2');
+    }, 2200);
+  };
+
+  const handleHash = () => {
+    const target = window.location.hash.slice(1);
+    if (!target) return;
+    const section = sections.find((node) => node.id === target);
+    if (section) {
+      window.requestAnimationFrame(() => highlight(section));
     }
-    window.addEventListener('hashchange', () => {
-      if (window.location.hash === '#' + sectionId) {
-        highlight();
-      }
-    });
-  }
+  };
+
+  handleHash();
+  window.addEventListener('hashchange', handleHash);
 </script>
