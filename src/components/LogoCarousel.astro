@@ -16,7 +16,7 @@ const resolveSrc = (file?: string) => (file ? `logos/${file}` : '');
             <img
               src={resolveSrc(logo.file)}
               alt={logo.name}
-              class="h-10 w-auto opacity-85 transition-opacity hover:opacity-100"
+              class="logo-img opacity-85 transition-opacity hover:opacity-100"
               loading="lazy"
             />
           ) : (
@@ -33,13 +33,14 @@ const resolveSrc = (file?: string) => (file ? `logos/${file}` : '');
 </div>
 
 <style>
-.logo-grid img {
+.logo-grid .logo-img {
+  max-height: 64px;
+  width: auto;
   filter: grayscale(100%);
-  opacity: 0.85;
   transition: opacity 150ms ease, filter 150ms ease;
 }
 
-.logo-grid img:hover {
+.logo-grid .logo-img:hover {
   filter: grayscale(0%);
   opacity: 1;
 }
