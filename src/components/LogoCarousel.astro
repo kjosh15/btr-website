@@ -5,8 +5,7 @@ type Logo = {
 };
 
 const { logos = [] }: { logos: Logo[] } = Astro.props;
-const base = import.meta.env.BASE_URL ?? '/';
-const resolveSrc = (file?: string) => (file ? `${base}logos/${file}` : null);
+const resolveSrc = (file?: string) => (file ? `logos/${file}` : '');
 ---
 <div class="rounded-2xl border border-white/15 bg-white/5 p-6">
   {logos.length ? (
@@ -15,7 +14,7 @@ const resolveSrc = (file?: string) => (file ? `${base}logos/${file}` : null);
         <figure class="flex h-16 items-center justify-center rounded-xl bg-white/10 px-3 py-2 text-center text-xs uppercase tracking-wide text-white/70">
           {logo.file ? (
             <img
-              src={resolveSrc(logo.file) ?? ''}
+              src={resolveSrc(logo.file)}
               alt={logo.name}
               class="h-10 w-auto opacity-85 transition-opacity hover:opacity-100"
               loading="lazy"
