@@ -1,0 +1,35 @@
+---
+const { logos = [] } = Astro.props;
+const marqueeItems = logos.concat(logos);
+---
+<div class="partner-carousel overflow-hidden rounded-2xl border border-btr-muted bg-white/90 p-6">
+  <div class="partner-track flex gap-10">
+    {marqueeItems.map((logo, index) => (
+      <figure class="flex h-16 min-w-[160px] items-center justify-center text-center text-xs uppercase tracking-wide text-btr-text/60" aria-label={logo.name}>
+        <img
+          src={`logos/${logo.file}`}
+          alt={logo.name}
+          class="max-h-12 w-auto opacity-85 transition-opacity hover:opacity-100"
+          loading={index < logos.length ? 'eager' : 'lazy'}
+        />
+      </figure>
+    ))}
+  </div>
+</div>
+
+<style>
+.partner-carousel {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+.partner-track {
+  animation: partner-scroll 24s linear infinite;
+}
+@keyframes partner-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+</style>
