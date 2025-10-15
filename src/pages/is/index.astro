@@ -31,6 +31,14 @@ const { Content: EngageContent } = await engage.render();
 
 const navItems = locale.nav;
 const alternate = { lang: 'en', href: '../' };
+const partnerLogos = [
+  { name: 'OpenAI', file: 'openai.svg' },
+  { name: 'Anthropic', file: 'anthropic.svg' },
+  { name: 'Google Cloud', file: 'google-cloud.svg' },
+  { name: 'AWS', file: 'aws.svg' },
+  { name: 'NVIDIA', file: 'nvidia.svg' },
+  { name: 'Microsoft', file: 'microsoft.png' },
+];
 ---
 <BaseLayout lang="is" locale={locale} navItems={navItems} alternate={alternate} meta={locale.meta}>
   <Hero data={hero.data} />
@@ -93,6 +101,15 @@ const alternate = { lang: 'en', href: '../' };
   </Section>
 
   <Section
+    id="partners"
+    eyebrow="[TODO] Samstarfsaðilar"
+    heading="[TODO] Vinnum með helstu AI vettvöngum"
+  >
+    <p class="text-btr-text/75">[TODO] Bæta við íslenskum texta um samstarf við OpenAI, Anthropic, Google, AWS og NVIDIA.</p>
+    <div class="mt-8"><LogoCarousel logos={partnerLogos} /></div>
+  </Section>
+
+  <Section
     id={offerings.data.section}
     eyebrow={offerings.data.eyebrow}
     heading={offerings.data.heading}
@@ -132,6 +149,5 @@ const alternate = { lang: 'en', href: '../' };
     )}
   </Section>
 
-  <ContactForm id="government-briefing" form={locale.forms.government} />
-  <ContactForm id="partner-intake" form={locale.forms.partner} />
+  <ContactForm id="connect" form={locale.forms.combined} />
 </BaseLayout>

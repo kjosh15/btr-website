@@ -21,10 +21,12 @@ const { data } = Astro.props;
       </p>
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
         <CtaGroup ctas={data.primaryCtas} align="start" />
-        <p class="text-sm font-medium text-btr-text/60">
+      </div>
+      {data.supportLine && (
+        <p class="text-sm font-medium text-btr-text/55">
           {data.supportLine}
         </p>
-      </div>
+      )}
     </div>
     <div class="mt-12 grid gap-8 rounded-3xl border border-btr-muted bg-btr-muted/35 p-8 text-sm leading-relaxed text-btr-text/75 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-center">
       <div class="space-y-4">
@@ -37,12 +39,12 @@ const { data } = Astro.props;
       </div>
       <dl class="grid gap-6 sm:grid-cols-3">
         <div class="space-y-2">
-          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Countries</dt>
-          <dd class="text-3xl font-semibold text-btr-accent">120+</dd>
+          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Strategic specifications</dt>
+          <dd class="text-3xl font-semibold text-btr-accent">40+</dd>
         </div>
         <div class="space-y-2">
-          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Trusted partners</dt>
-          <dd class="text-3xl font-semibold text-btr-accent">15+</dd>
+          <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Pilot programmes</dt>
+          <dd class="text-3xl font-semibold text-btr-accent">8+</dd>
         </div>
         <div class="space-y-2">
           <dt class="text-[0.65rem] uppercase tracking-[0.32em] text-btr-text/45">Years advising</dt>

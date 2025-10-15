@@ -7,11 +7,7 @@ subheadline: >
   refine strategy, and guide implementation through aligned partners.
 supportLine: Proven in Iceland. Expanding globally.
 primaryCtas:
-  - label: Request a Government Briefing
-    href: "#government-briefing"
+  - label: Start a Conversation
+    href: "#connect"
     variant: primary
-  - label: Download One-Page Overview
-    href: "/pdfs/BTR_OnePage_Overview.pdf"
-    variant: outline
-    external: true
 ---

@@ -4,7 +4,7 @@ eyebrow: "[TODO] Fyrir stjórnvöld"
 heading: "[TODO] Sjálfstæður stefnumótandi samstarfsaðili."
 cta:
   label: "[TODO] Bóka stefnumótunarfund"
-  href: "#government-briefing"
+  href: "#connect"
 benefits:
   - "[TODO] Ávinningur 1"
   - "[TODO] Ávinningur 2"

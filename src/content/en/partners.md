@@ -4,7 +4,7 @@ eyebrow: For Technology and Institutional Partners
 heading: Where strategy meets implementation.
 cta:
   label: Start a Partnership Conversation
-  href: "#partner-intake"
+  href: "#connect"
 benefits:
   - Government-backed use cases with defined specifications
   - Transparent collaboration and evaluation process

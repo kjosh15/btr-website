@@ -32,4 +32,6 @@ BTR is led by strategist **Josh Klein**, whose work spans national governments, 
 
 Josh brings together partners across sectors to create sovereign AI frameworks that balance innovation with governance, public trust, and economic value.
 
+We actively coordinate with leading model and cloud partners including OpenAI, Anthropic, Google Cloud, AWS, and NVIDIA to keep strategy aligned with delivery teams.
+
 > Our mandate: ensure every nation and institution can design, govern, and benefit from AI on its own terms.

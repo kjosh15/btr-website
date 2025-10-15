@@ -1,16 +1,12 @@
 ---
 section: engage
 eyebrow: Next steps
-heading: Choose how to engage with BTR
+heading: Start a conversation with BTR
 actions:
-  - title: Request a government strategy briefing
-    summary: We prepare a tailored session for ministries or multilateral teams based on your current priorities and timelines.
-    ctaLabel: Start briefing request
-    href: "#government-briefing"
-  - title: Explore partnership alignment
-    summary: Share how your organisation supports sovereign AI delivery so we can identify live opportunities and fit.
-    ctaLabel: Introduce your team
-    href: "#partner-intake"
+  - title: Schedule a strategy conversation
+    summary: Tell us about your ministry, organisation, or partnership idea and we will follow up with the right next step.
+    ctaLabel: Contact BTR
+    href: "#connect"
   - title: Review the Sovereign AI overview
     summary: Download the concise briefing that outlines our approach, focus areas, and model for national implementation.
     ctaLabel: Download overview (PDF)

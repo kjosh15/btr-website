@@ -8,24 +8,20 @@ type Stat = {
 const { stats = [] }: { stats: Stat[] } = Astro.props;
 ---
 {stats.length > 0 && (
-  <div class="grid gap-5 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,1.1fr)_repeat(3,minmax(0,1fr))]">
-    {stats.map((stat, index) => (
-      <article
-        class={`rounded-2xl border border-btr-muted bg-white/90 px-6 py-7 shadow-sm transition hover:-translate-y-1 hover:border-btr-accent/30 hover:shadow-md ${index === 0 ? 'sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:bg-btr-accent/8 lg:text-left' : 'text-center'}`}
-      >
-        <div class={`space-y-2 ${index === 0 ? 'text-left' : 'text-center'}`}>
-          <p class={`${index === 0 ? 'text-4xl sm:text-5xl' : 'text-3xl'} font-semibold tracking-tight text-btr-accent`}>
-            {stat.value}
-          </p>
-          <p class={`${index === 0 ? 'text-base' : 'text-sm'} font-medium text-btr-text/80`}>
-            {stat.label}
-          </p>
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    {stats.map((stat) => (
+      <article class="flex h-full flex-col items-center justify-between rounded-2xl border border-btr-muted bg-white/90 px-6 py-7 text-center shadow-sm transition hover:-translate-y-1 hover:border-btr-accent/30 hover:shadow-md">
+        <div class="space-y-2">
+          <p class="text-3xl font-semibold tracking-tight text-btr-accent">{stat.value}</p>
+          <p class="text-sm font-medium text-btr-text/80">{stat.label}</p>
         </div>
         {stat.source && (
-          <p class={`mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-btr-text/40 ${index === 0 ? 'text-left' : 'text-center'}`}>
-            {stat.source}
-          </p>
+          <p class="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-btr-text/40">{stat.source}</p>
         )}
+      </article>
+    ))}
+  </div>
+)}
       </article>
     ))}
   </div>

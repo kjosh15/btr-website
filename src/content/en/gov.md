@@ -4,7 +4,7 @@ eyebrow: For Governments
 heading: Your independent strategy partner for AI leadership.
 cta:
   label: Book a Government Strategy Session
-  href: "#government-briefing"
+  href: "#connect"
 benefits:
   - Strategy-first roadmap grounded in national priorities
   - Clear specifications vendors can execute
