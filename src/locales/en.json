@@ -13,16 +13,16 @@
       "label": "Approach"
     },
     {
-      "id": "proof",
-      "label": "Proof"
-    },
-    {
       "id": "about",
       "label": "Team"
     },
     {
+      "id": "proof",
+      "label": "Proof"
+    },
+    {
       "id": "engage",
-      "label": "Engage"
+      "label": "Contact"
     }
   ],
   "headerCta": "Contact BTR",
@@ -32,8 +32,8 @@
   },
   "forms": {
     "combined": {
-      "title": "Contact BTR",
-      "description": "Whether you represent a ministry, multilateral, or technology partner, share a few details and we will follow up with the next step.",
+      "title": "",
+      "description": "",
       "action": "#",
       "submitLabel": "Send Message",
       "fields": [
@@ -83,21 +83,21 @@
     }
   },
   "footer": {
-    "contactHeading": "Contact",
+    "contactHeading": "",
     "contact": [
       {
-        "label": "Contact BTR",
-        "href": "mailto:contact@btr.is"
+        "label": "Contact",
+        "href": "#engage"
       }
     ],
     "legal": [
       {
         "label": "Privacy",
-        "href": "#"
+        "href": "/privacy"
       },
       {
         "label": "Terms",
-        "href": "#"
+        "href": "/terms"
       }
     ],
     "copyright": "© BTR ehf"

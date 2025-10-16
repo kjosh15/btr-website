@@ -4,25 +4,24 @@ const contact = locale.footer?.contact ?? [];
 const legal = locale.footer?.legal ?? [];
 ---
 <footer class="mt-20 bg-btr-cta text-white">
-  <div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 md:flex-row md:justify-between">
-    <div class="max-w-md space-y-4">
-      <span class="text-sm font-semibold uppercase tracking-wide text-white/70">
-        {locale.footer?.contactHeading ?? 'Contact'}
-      </span>
-      <ul class="space-y-2 text-base">
-        {contact.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class="transition-colors hover:text-btr-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div class="flex flex-col justify-between text-sm text-white/70 md:items-end">
+  <div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between">
+    {contact.length > 0 && (
+      <div class="space-y-2">
+        <ul class="space-y-2 text-base">
+          {contact.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-white transition-colors hover:text-btr-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+    <div class="flex flex-col items-start gap-4 text-sm text-white/70 md:items-end md:gap-2">
       <ul class="flex flex-wrap gap-4">
         {legal.map((item) => (
           <li>

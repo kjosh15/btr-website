@@ -40,4 +40,4 @@ Josh brings together partners across sectors to create sovereign AI frameworks t
 
 We actively coordinate with leading model and cloud partners—including OpenAI, Anthropic, Google Cloud, AWS, and NVIDIA—while sustaining long-running relationships with multinational enterprises and agencies such as the CIA, FBI, and ODNI.
 
-> _Our mandate: ensure every nation and institution can design, govern, and benefit from AI on its own terms._
+> “Our mandate: ensure every nation and institution can design, govern, and benefit from AI on its own terms.”

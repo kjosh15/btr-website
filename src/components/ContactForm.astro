@@ -22,16 +22,20 @@ const {
 ---
 <section id={id} class="bg-white py-16 transition" data-form-section>
   <div class="mx-auto max-w-3xl space-y-8 px-6">
-    <div class="space-y-3">
-      <h3 class="text-2xl font-semibold text-btr-text">
-        {form.title}
-      </h3>
-      {form.description && (
-        <p class="text-base text-btr-text/75">
-          {form.description}
-        </p>
-      )}
-    </div>
+    {(form.title || form.description) && (
+      <div class="space-y-3">
+        {form.title && (
+          <h3 class="text-2xl font-semibold text-btr-text">
+            {form.title}
+          </h3>
+        )}
+        {form.description && (
+          <p class="text-base text-btr-text/75">
+            {form.description}
+          </p>
+        )}
+      </div>
+    )}
     <form
       method="post"
       action={form.action ?? '#'}

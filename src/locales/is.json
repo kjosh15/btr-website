@@ -13,16 +13,16 @@
       "label": "[TODO] Nálgun"
     },
     {
-      "id": "proof",
-      "label": "[TODO] Sannanir"
-    },
-    {
       "id": "about",
       "label": "[TODO] Teimið"
     },
     {
+      "id": "proof",
+      "label": "[TODO] Sannanir"
+    },
+    {
       "id": "engage",
-      "label": "[TODO] Hafðu samband"
+      "label": "[TODO] Hafa samband"
     }
   ],
   "headerCta": "[TODO] Hafa samband",
@@ -32,10 +32,10 @@
   },
   "forms": {
     "combined": {
-      "title": "[TODO] Hafa samband",
-      "description": "[TODO] Lýsing verður uppfærð.",
+      "title": "",
+      "description": "",
       "action": "#",
-      "submitLabel": "[TODO] Senda skilaboð",
+      "submitLabel": "[TODO] Senda",
       "fields": [
         {
           "id": "name",
@@ -83,21 +83,21 @@
     }
   },
   "footer": {
-    "contactHeading": "[TODO] Hafa samband",
+    "contactHeading": "",
     "contact": [
       {
         "label": "[TODO] Hafa samband",
-        "href": "mailto:contact@btr.is"
+        "href": "#engage"
       }
     ],
     "legal": [
       {
         "label": "[TODO] Persónuvernd",
-        "href": "#"
+        "href": "/privacy"
       },
       {
         "label": "[TODO] Skilmálar",
-        "href": "#"
+        "href": "/terms"
       }
     ],
     "copyright": "© BTR ehf"
