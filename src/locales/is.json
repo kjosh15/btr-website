@@ -17,10 +17,6 @@
       "label": "[TODO] Sannanir"
     },
     {
-      "id": "offerings",
-      "label": "[TODO] Getur"
-    },
-    {
       "id": "about",
       "label": "[TODO] Teimið"
     },
@@ -36,7 +32,7 @@
   },
   "forms": {
     "combined": {
-      "title": "[TODO] Hafðu samband",
+      "title": "[TODO] Hafa samband",
       "description": "[TODO] Lýsing verður uppfærð.",
       "action": "#",
       "submitLabel": "[TODO] Senda skilaboð",
@@ -90,16 +86,8 @@
     "contactHeading": "[TODO] Hafa samband",
     "contact": [
       {
-        "label": "[TODO] Ríkisverkefni",
-        "href": "mailto:gov@btr.is"
-      },
-      {
-        "label": "[TODO] Samstarf",
-        "href": "mailto:partners@btr.is"
-      },
-      {
-        "label": "[TODO] Almennar fyrirspurnir",
-        "href": "mailto:hello@btr.is"
+        "label": "[TODO] Hafa samband",
+        "href": "mailto:contact@btr.is"
       }
     ],
     "legal": [

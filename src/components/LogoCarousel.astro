@@ -5,19 +5,19 @@ type Logo = {
 };
 
 const { logos = [] }: { logos: Logo[] } = Astro.props;
-const resolveSrc = (file?: string) => (file ? `logos/${file}` : '');
+const marqueeItems = logos.concat(logos);
 ---
-<div class="rounded-2xl border border-white/15 bg-white/5 p-6">
+<div class="logo-marquee overflow-hidden rounded-2xl border border-btr-muted bg-white/90 p-6">
   {logos.length ? (
-    <div class="logo-grid grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
-      {logos.map((logo) => (
-        <figure class="flex h-16 items-center justify-center rounded-xl bg-white/10 px-3 py-2 text-center text-xs uppercase tracking-wide text-white/70">
+    <div class="logo-track flex gap-10">
+      {marqueeItems.map((logo, index) => (
+        <figure class="flex h-16 min-w-[160px] items-center justify-center text-center text-xs uppercase tracking-wide text-btr-text/60">
           {logo.file ? (
             <img
-              src={resolveSrc(logo.file)}
+              src={`logos/${logo.file}`}
               alt={logo.name}
-              class="logo-img opacity-85 transition-opacity hover:opacity-100"
-              loading="lazy"
+              class="max-h-12 w-auto opacity-85 transition-opacity hover:opacity-100"
+              loading={index < logos.length ? 'eager' : 'lazy'}
             />
           ) : (
             <span>{logo.name}</span>
@@ -26,22 +26,27 @@ const resolveSrc = (file?: string) => (file ? `logos/${file}` : '');
       ))}
     </div>
   ) : (
-    <div class="text-center text-sm text-white/70">
-      Add SVG or PNG logos to <code class="rounded bg-white/10 px-1">public/logos</code> and list them in the content frontmatter.
+    <div class="text-center text-sm text-btr-text/70">
+      Add SVG or PNG logos to <code class="rounded bg-btr-muted px-1">public/logos</code> and list them in the content frontmatter.
     </div>
   )}
 </div>
 
 <style>
-.logo-grid .logo-img {
-  max-height: 64px;
-  width: auto;
-  filter: grayscale(100%);
-  transition: opacity 150ms ease, filter 150ms ease;
+.logo-marquee {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.logo-grid .logo-img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
+.logo-track {
+  animation: logo-scroll 32s linear infinite;
+}
+
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 </style>

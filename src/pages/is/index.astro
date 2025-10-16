@@ -10,7 +10,6 @@ import ContactForm from '../../components/ContactForm.astro';
 import StatsGrid from '../../components/StatsGrid.astro';
 import StepsTimeline from '../../components/StepsTimeline.astro';
 import CaseGrid from '../../components/CaseGrid.astro';
-import OfferingsColumns from '../../components/OfferingsColumns.astro';
 import EngageCards from '../../components/EngageCards.astro';
 import PartnerCarousel from '../../components/PartnerCarousel.astro';
 import locale from '../../locales/is.json';
@@ -19,14 +18,12 @@ const hero = await getEntryBySlug('is', 'hero');
 const why = await getEntryBySlug('is', 'why');
 const process = await getEntryBySlug('is', 'process');
 const proof = await getEntryBySlug('is', 'proof');
-const offerings = await getEntryBySlug('is', 'offerings');
 const about = await getEntryBySlug('is', 'about');
 const engage = await getEntryBySlug('is', 'final-cta');
 
 const { Content: WhyContent } = await why.render();
 const { Content: ProcessContent } = await process.render();
 const { Content: ProofContent } = await proof.render();
-const { Content: OfferingsContent } = await offerings.render();
 const { Content: AboutContent } = await about.render();
 const { Content: EngageContent } = await engage.render();
 
@@ -53,13 +50,6 @@ const partnerLogos = [
     {why.data.stats && <StatsGrid stats={why.data.stats} />}
     <div class="mt-8 space-y-6">
       <WhyContent />
-      {(why.data.calloutTitle || why.data.calloutBody) && (
-        <blockquote class="rounded-3xl bg-btr-accent/5 p-8 text-2xl font-semibold leading-snug text-btr-text/85">
-          {why.data.calloutTitle && (
-            <span class="block text-sm font-semibold uppercase tracking-[0.28em] text-btr-accent">
-              {why.data.calloutTitle}
-            </span>
-          )}
           <span class="mt-3 block text-btr-text/80">{why.data.calloutBody}</span>
         </blockquote>
       )}
@@ -111,22 +101,6 @@ const partnerLogos = [
   </Section>
 
   <Section
-    id={offerings.data.section}
-    eyebrow={offerings.data.eyebrow}
-    heading={offerings.data.heading}
-    background="muted"
-  >
-    <div class="rounded-2xl border border-btr-muted bg-white/90 p-6 text-btr-text/80">
-      <OfferingsContent />
-    </div>
-    {offerings.data.audiences && (
-      <div class="mt-10">
-        <OfferingsColumns audiences={offerings.data.audiences} />
-      </div>
-    )}
-  </Section>
-
-  <Section
     id={about.data.section}
     eyebrow={about.data.eyebrow}
     heading={about.data.heading}
@@ -151,7 +125,8 @@ const partnerLogos = [
         <EngageCards actions={engage.data.actions} />
       </div>
     )}
+    <div class="mt-12">
+      <ContactForm id="connect" form={locale.forms.combined} />
+    </div>
   </Section>
-
-  <ContactForm id="connect" form={locale.forms.combined} />
 </BaseLayout>

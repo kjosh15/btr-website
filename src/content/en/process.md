@@ -17,4 +17,4 @@ steps:
 ---
 BTR specializes in the upstream and sustaining phases of Sovereign AI—ensuring every build is anchored in strategy. We stay embedded from discovery through scale so strategy becomes a living system, not a static plan.
 
-We work shoulder-to-shoulder with ministries, delivery partners, and civic stakeholders, translating national objectives into specifications that hold up during implementation. Every phase feeds the next, creating a single programme where learning, governance, and delivery stay aligned.
+We work shoulder-to-shoulder with ministries, delivery partners, and frontier model vendors, translating national objectives into specifications that hold up during implementation. Every phase feeds the next, keeping strategy, partners, and delivery aligned.

@@ -17,10 +17,6 @@
       "label": "Proof"
     },
     {
-      "id": "offerings",
-      "label": "Capabilities"
-    },
-    {
       "id": "about",
       "label": "Team"
     },
@@ -36,7 +32,7 @@
   },
   "forms": {
     "combined": {
-      "title": "Start a Conversation",
+      "title": "Contact BTR",
       "description": "Whether you represent a ministry, multilateral, or technology partner, share a few details and we will follow up with the next step.",
       "action": "#",
       "submitLabel": "Send Message",
@@ -90,16 +86,8 @@
     "contactHeading": "Contact",
     "contact": [
       {
-        "label": "Government intake",
-        "href": "mailto:gov@btr.is"
-      },
-      {
-        "label": "Partner intake",
-        "href": "mailto:partners@btr.is"
-      },
-      {
-        "label": "General inquiries",
-        "href": "mailto:hello@btr.is"
+        "label": "Contact BTR",
+        "href": "mailto:contact@btr.is"
       }
     ],
     "legal": [
