@@ -34,7 +34,7 @@ logos:
   - name: ODNI
     file: odni.svg
 ---
-BTR is led by strategist **Josh Klein**, whose work spans national governments, multilateral agencies, and the world’s leading technology institutions. For more than two decades he has translated emerging technology into policy, organisational change, and responsible deployment.
+BTR is led by strategist **[Josh Klein](mailto:josh@josh.is)**, whose work spans national governments, multilateral agencies, and the world’s leading technology institutions. For more than two decades he has translated emerging technology into policy, organisational change, and responsible deployment.
 
 Josh brings together partners across sectors to create sovereign AI frameworks that balance innovation with governance, public trust, and economic value.
 

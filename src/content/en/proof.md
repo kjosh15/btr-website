@@ -13,4 +13,4 @@ cases:
     summary: Co-created a national AI strategy and capacity roadmap that grounds emerging technology adoption in sustainable development goals for an island nation.
     tag: National Policy
 ---
-Beyond pilots, BTR designs the frameworks that keep results aligned to national priorities. Engagements range from education and workforce development to AI governance and institutional capacity building. Our Sovereign AI Model captures the operating blueprint we use to move from discovery to implementation.
+Beyond pilots, BTR designs the frameworks that keep results aligned to national priorities. Engagements range from education and workforce development to AI governance and institutional capacity building. We maintain an extensive library of partner case studies that illustrates how ministries, divisions, and enterprises can harness AI to leapfrog their current state, informed by real deployments. Our Sovereign AI Model captures the operating blueprint we use to move from discovery to implementation.

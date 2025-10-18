@@ -3,7 +3,7 @@ section: hero
 headline: "Sovereign AI: Strategies for Nations and Organizations"
 subheadline: >
   BTR helps governments and institutions define how AI should serve their people—turning national context into clear,
-  buildable strategies that trusted partners can execute. We focus on strategy first, run pilots where they validate or
+  buildable strategies that trusted partners can execute. We maintain direct access to frontier model and cloud providers, focus on strategy first, run pilots where they validate or
   refine strategy, and guide implementation through aligned partners.
 supportLine: Proven in Iceland. Expanding globally.
 primaryCtas:
