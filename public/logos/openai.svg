@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
-  <rect width="200" height="60" fill="none"/>
-  <text x="100" y="38" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="28" fill="#1f1f1f" letter-spacing="2">OpenAI</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="none"/>
+  <path fill="#1f1f1f" d="M128.6 20l-18 32.4c-8.3.3-16.6 2.4-24.3 6.6L58 42l-18.4 18.4 17.1 28c-4 7.5-6.2 15.7-6.5 23.8L20 130.5l12.2 33 33.4-1.3c4.4 7.7 10.1 14.5 17 20L68 196l18.4 18.4 25.4-15.2c7.6 3.4 15.7 5.3 24 5.6L154 236l18.4-18.4-15.3-25.3c3.6-7.8 5.6-16.1 5.9-24.4L236 154l-12.6-33.2-33.6 1.1c-4.3-7.6-10-14.3-16.8-19.7L196 68l-18.4-18.4-26 15.4c-7.7-3.6-16-5.5-24.7-6z"/>
 </svg>
