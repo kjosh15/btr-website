@@ -11,8 +11,17 @@ const {
 <header class="sticky top-0 z-50 border-b border-btr-muted bg-white/90 backdrop-blur">
   <div class="mx-auto max-w-6xl px-6 py-4">
     <div class="flex items-center justify-between gap-4">
-      <a href="#hero" class="text-lg font-semibold text-btr-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent">
-        BTR
+      <a
+        href="#hero"
+        class="inline-flex items-center gap-3 text-btr-text focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
+        aria-label="BTR — Home"
+      >
+        <span class="flex h-10 w-10 items-center justify-center rounded-full border border-btr-text text-base font-bold tracking-[0.3em]">
+          B
+        </span>
+        <span class="text-sm font-semibold uppercase tracking-[0.6em] text-btr-text/80">
+          BTR
+        </span>
       </a>
       <nav class="hidden items-center gap-5 text-sm font-medium text-btr-text/75 md:flex">
         {navItems.map((item) => (

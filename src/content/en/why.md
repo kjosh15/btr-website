@@ -6,14 +6,19 @@ stats:
   - value: "120+"
     label: "countries have published or are drafting AI strategies"
     source: "OECD, 2024"
+    sourceUrl: "https://oecd.ai/en/strategies"
   - value: "10%"
     label: "of public-sector AI projects succeed without strategic guidance"
     source: "World Bank, 2023"
+    sourceUrl: "https://www.worldbank.org/en/topic/governance/brief/govtech-maturity-index"
   - value: "70%"
     label: "of digital ministries cite data governance and vendor lock-in as top risks"
     source: "UN E-Government Survey, 2024"
+    sourceUrl: "https://publicadministration.un.org/egovkb/en-us/Reports/UN-E-Government-Survey-2022"
   - value: "2×"
     label: "Acceleration of private-sector AI adoption year over year"
+    source: "McKinsey State of AI, 2023"
+    sourceUrl: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year"
 calloutTitle: Strategy is the system.
 calloutBody: Pilots should serve strategy—not replace it.
 ---

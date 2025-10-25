@@ -43,10 +43,13 @@
   }
 
   blockquote {
-    border-left: 3px solid theme('colors.btr-accent');
-    padding-left: 1rem;
-    font-style: normal;
+    border: none;
+    padding: 2rem 1.5rem;
+    font-style: italic;
+    text-align: center;
     color: theme('colors.btr-text');
+    background-color: theme('colors.btr-muted');
+    border-radius: 1.5rem;
   }
 
 }

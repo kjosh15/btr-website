@@ -42,6 +42,15 @@ const partnerLogos = [
   <Hero data={hero.data} />
 
   <Section
+    id="partners"
+    eyebrow="[TODO] Samstarfsaðilar"
+    heading="[TODO] Samstarf við fremstu AI vettvanga"
+  >
+    <p class="text-btr-text/75">[TODO] Bæta við íslenskum texta um virkt samstarf við OpenAI, Anthropic, Google Cloud, AWS og NVIDIA.</p>
+    <div class="mt-8"><PartnerCarousel logos={partnerLogos} /></div>
+  </Section>
+
+  <Section
     id={why.data.section}
     eyebrow={why.data.eyebrow}
     heading={why.data.heading}
@@ -72,7 +81,7 @@ const partnerLogos = [
       <div class="space-y-6">
         <ProcessContent />
         {process.data.quote && (
-          <blockquote class="rounded-3xl border border-btr-accent/15 bg-btr-muted/40 p-6 text-base font-medium text-btr-text/80">
+          <blockquote class="rounded-3xl border border-btr-accent/20 bg-btr-muted/40 p-6 text-center text-xl font-semibold italic text-btr-text/80">
             “{process.data.quote}”
           </blockquote>
         )}
@@ -112,28 +121,19 @@ const partnerLogos = [
   </Section>
 
   <Section
-    id="partners"
-    eyebrow="[TODO] Samstarfsaðilar"
-    heading="[TODO] Vinnum með helstu AI vettvöngum"
-  >
-    <p class="text-btr-text/75">[TODO] Bæta við íslenskum texta um samstarf við OpenAI, Anthropic, Google, AWS og NVIDIA.</p>
-    <div class="mt-8"><PartnerCarousel logos={partnerLogos} /></div>
-  </Section>
-
-  <Section
     id={engage.data.section}
     eyebrow={engage.data.eyebrow}
     heading={engage.data.heading}
     background="muted"
   >
     <EngageContent />
+    <div class="mt-8">
+      <ContactForm id="connect" form={locale.forms.combined} />
+    </div>
     {engage.data.actions && (
-      <div class="mt-8">
+      <div class="mt-12">
         <EngageCards actions={engage.data.actions} />
       </div>
     )}
-    <div class="mt-12">
-      <ContactForm id="connect" form={locale.forms.combined} />
-    </div>
   </Section>
 </BaseLayout>

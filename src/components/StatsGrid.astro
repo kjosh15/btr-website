@@ -3,6 +3,7 @@ type Stat = {
   value: string;
   label: string;
   source?: string;
+  sourceUrl?: string;
 };
 
 const { stats = [] }: { stats: Stat[] } = Astro.props;
@@ -16,7 +17,20 @@ const { stats = [] }: { stats: Stat[] } = Astro.props;
           <p class="text-sm font-medium text-btr-text/80">{stat.label}</p>
         </div>
         {stat.source && (
-          <p class="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-btr-text/40">{stat.source}</p>
+          <p class="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-btr-text/40">
+            {stat.sourceUrl ? (
+              <a
+                href={stat.sourceUrl}
+                class="underline decoration-dotted underline-offset-2 hover:text-btr-accent"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {stat.source}
+              </a>
+            ) : (
+              stat.source
+            )}
+          </p>
         )}
       </article>
     ))}

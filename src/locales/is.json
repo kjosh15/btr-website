@@ -9,6 +9,10 @@
       "label": "[TODO] Yfirlit"
     },
     {
+      "id": "why",
+      "label": "[TODO] Af hverju"
+    },
+    {
       "id": "process",
       "label": "[TODO] Nálgun"
     },
@@ -22,7 +26,7 @@
     },
     {
       "id": "engage",
-      "label": "[TODO] Hafa samband"
+      "label": "[TODO] Hafðu samband"
     }
   ],
   "headerCta": "[TODO] Hafa samband",
