@@ -1,7 +1,6 @@
 # Core dependencies and build outputs
 node_modules/
 .astro/
-dist/
 
 # Environment and logs
 .env
