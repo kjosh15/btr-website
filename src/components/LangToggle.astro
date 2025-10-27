@@ -25,15 +25,12 @@ const {
   toggles.forEach((toggle) => {
     const currentLang = toggle.dataset.currentLang;
     const targetLang = toggle.dataset.targetLang;
-    const targetHref = toggle.getAttribute('href');
 
-    if (!currentLang || !targetLang || !targetHref) return;
+    if (!currentLang || !targetLang) return;
 
     const stored = localStorage.getItem(preferenceKey);
     if (!stored) {
       localStorage.setItem(preferenceKey, currentLang);
-    } else if (stored !== currentLang && stored === targetLang) {
-      window.location.replace(targetHref);
     }
 
     toggle.addEventListener('click', () => {
