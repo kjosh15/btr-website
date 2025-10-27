@@ -36,6 +36,10 @@
       "description": "",
       "action": "/contact.php",
       "submitLabel": "Senda skilaboð",
+      "prefill": {
+        "key": "ai-model",
+        "message": "Vinsamlegast sendið mér fullveldis-AI módelið og upplýsingar um næstu skref."
+      },
       "fields": [
         { "id": "name", "label": "Nafn", "type": "text", "required": true },
         { "id": "role", "label": "Hlutverk / titill", "type": "text", "required": true },

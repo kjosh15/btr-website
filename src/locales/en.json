@@ -54,6 +54,10 @@
       "description": "",
       "action": "/contact.php",
       "submitLabel": "Send Message",
+      "prefill": {
+        "key": "ai-model",
+        "message": "Please send me the Sovereign AI Model overview and next steps."
+      },
       "fields": [
         {
           "id": "name",

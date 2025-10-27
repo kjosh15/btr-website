@@ -10,6 +10,7 @@ const {
   id,
   form,
   lang = 'en',
+  prefill,
 }: {
   id: string;
   form: {
@@ -20,9 +21,13 @@ const {
     fields: Field[];
   };
   lang?: string;
+  prefill?: {
+    key: string;
+    message: string;
+  };
 } = Astro.props;
 ---
-<section id={id} class="bg-white py-16 transition" data-form-section>
+<section id={id} class="bg-white py-16 transition" data-form-section data-form-id={id}>
   <div class="mx-auto max-w-3xl space-y-8 px-6">
     {(form.title || form.description) && (
       <div class="space-y-3">
@@ -42,6 +47,8 @@ const {
       method="post"
       action={form.action ?? '#'}
       class="space-y-6 rounded-2xl border border-btr-muted bg-btr-muted/40 p-6 shadow-sm"
+      data-prefill-key={prefill?.key}
+      data-prefill-message={prefill?.message}
     >
       {form.fields.map((field) => (
         <div class="space-y-2">
@@ -99,4 +106,18 @@ const {
 
   handleHash();
   window.addEventListener('hashchange', handleHash);
+
+  const params = new URL(window.location.href).searchParams;
+  sections.forEach((section) => {
+    const form = section.querySelector('form');
+    if (!form) return;
+    const prefillKey = form.getAttribute('data-prefill-key');
+    const prefillMessage = form.getAttribute('data-prefill-message');
+    if (!prefillKey || !prefillMessage) return;
+    if (params.get('prefill') !== prefillKey) return;
+    const interestField = form.querySelector('textarea[name="interest"]');
+    if (interestField && interestField.value.trim().length === 0) {
+      interestField.value = prefillMessage;
+    }
+  });
 </script>

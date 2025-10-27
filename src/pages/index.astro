@@ -157,7 +157,12 @@ const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
   >
     <EngageContent />
     <div class="mt-8">
-      <ContactForm id="connect" form={locale.forms.combined} lang={locale.lang ?? 'en'} />
+      <ContactForm
+        id="connect"
+        form={locale.forms.combined}
+        lang={locale.lang ?? 'en'}
+        prefill={locale.forms.combined.prefill}
+      />
     </div>
     {engage.data.actions && (
       <div class="mt-12">
