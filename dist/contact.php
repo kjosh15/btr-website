@@ -29,7 +29,10 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 $to = 'josh@josh.is';
+$fromAddress = 'web@btr.is';
 $subject = 'New inquiry from BTR.is';
+
+ini_set('sendmail_from', $fromAddress);
 
 $body = implode("\n", [
     "Name: {$data['name']}",
@@ -43,9 +46,10 @@ $body = implode("\n", [
 ]);
 
 $headers = [
-    'From' => 'BTR.is <no-reply@btr.is>',
+    'From' => "BTR.is <{$fromAddress}>",
     'Reply-To' => "{$data['name']} <{$data['email']}>",
     'Content-Type' => 'text/plain; charset=UTF-8',
+    'X-Mailer' => 'PHP/' . phpversion(),
 ];
 $headersString = '';
 foreach ($headers as $key => $value) {
@@ -71,7 +75,24 @@ $strings = [
 
 $languageStrings = $strings[$lang];
 
-$success = empty($errors) ? mail($to, $subject, $body, $headersString) : false;
+$logDir = dirname(__DIR__) . '/contact_logs';
+if (!is_dir($logDir)) {
+    mkdir($logDir, 0775, true);
+}
+
+$success = empty($errors)
+    ? mail($to, $subject, $body, $headersString, '-f' . $fromAddress)
+    : false;
+
+$logEntry = json_encode([
+    'timestamp' => date('c'),
+    'lang' => $lang,
+    'email' => $data['email'],
+    'success' => $success,
+    'errors' => $errors,
+    'mail_error' => $success ? null : error_get_last(),
+], JSON_PRETTY_PRINT);
+file_put_contents($logDir . '/contact.log', $logEntry . PHP_EOL, FILE_APPEND);
 $statusTitle = $success ? $languageStrings['successTitle'] : $languageStrings['errorTitle'];
 $statusBody = $success ? $languageStrings['successBody'] : $languageStrings['errorBody'];
 

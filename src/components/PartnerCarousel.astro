@@ -7,7 +7,7 @@ const marqueeItems = logos.concat(logos);
     {marqueeItems.map((logo, index) => (
       <figure class="flex h-16 min-w-[160px] items-center justify-center text-center text-xs uppercase tracking-wide text-btr-text/60" aria-label={logo.name}>
         <img
-          src={`logos/${logo.file}`}
+          src={`/logos/${logo.file}`}
           alt={logo.name}
           class="max-h-12 w-auto opacity-85 filter grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
           loading={index < logos.length ? 'eager' : 'lazy'}
