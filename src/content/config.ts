@@ -51,6 +51,7 @@ const baseSection = z.object({
         value: z.string(),
         label: z.string(),
         source: z.string().optional(),
+        sourceUrl: z.string().optional(),
       }),
     )
     .optional(),
@@ -73,6 +74,7 @@ const baseSection = z.object({
     )
     .optional(),
   benefits: z.array(z.string()).optional(),
+  mandate: z.string().optional(),
 });
 
 const localeCollection = defineCollection({

@@ -38,7 +38,7 @@
     "combined": {
       "title": "",
       "description": "",
-      "action": "#",
+      "action": "/contact.php",
       "submitLabel": "Send Message",
       "fields": [
         {

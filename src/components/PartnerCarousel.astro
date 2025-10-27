@@ -9,7 +9,7 @@ const marqueeItems = logos.concat(logos);
         <img
           src={`logos/${logo.file}`}
           alt={logo.name}
-          class="max-h-12 w-auto opacity-85 transition-opacity hover:opacity-100"
+          class="max-h-12 w-auto opacity-85 filter grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
           loading={index < logos.length ? 'eager' : 'lazy'}
         />
       </figure>

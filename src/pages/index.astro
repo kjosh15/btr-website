@@ -35,8 +35,17 @@ const partnerLogos = [
   { name: 'Google Cloud', file: 'google-cloud.svg' },
   { name: 'AWS', file: 'aws.svg' },
   { name: 'NVIDIA', file: 'nvidia.svg' },
-  { name: 'Microsoft', file: 'microsoft.png' },
+  { name: 'Microsoft', file: 'microsoft.svg' },
 ];
+
+const rawMandate = about.data.mandate ?? '';
+const [mandateHeadingRaw, ...mandateRest] = rawMandate.split(':');
+const hasMandateSplit = mandateRest.length > 0;
+const mandateHeadingBase = hasMandateSplit
+  ? (mandateHeadingRaw?.trim() || 'Our mandate')
+  : 'Our mandate';
+const mandateHeading = mandateHeadingBase.replace(/[:;]*$/, '') + ';';
+const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
 ---
 <BaseLayout lang="en" locale={locale} navItems={navItems} alternate={alternate} meta={locale.meta}>
   <Hero data={hero.data} />
@@ -50,6 +59,16 @@ const partnerLogos = [
       We maintain active NDAs, MOUs, and standing working sessions with OpenAI, Anthropic, Google Cloud, AWS, NVIDIA, and other frontier vendors so policy, pilots, and delivery teams stay aligned.
     </p>
     <div class="mt-8"><PartnerCarousel logos={partnerLogos} /></div>
+    {about.data.mandate && (
+      <blockquote class="quote-card mt-8 text-left sm:text-center">
+        <span class="block text-sm font-semibold uppercase tracking-[0.28em] text-btr-accent">
+          {mandateHeading}
+        </span>
+        <span class="mt-3 block text-btr-text/75">
+          {mandateBody}
+        </span>
+      </blockquote>
+    )}
   </Section>
 
   <Section
@@ -62,7 +81,7 @@ const partnerLogos = [
     <div class="mt-8 space-y-6">
       <WhyContent />
       {(why.data.calloutTitle || why.data.calloutBody) && (
-        <blockquote class="rounded-3xl border border-btr-accent/15 bg-white/95 p-8 text-center text-2xl font-semibold leading-snug italic text-btr-text/80">
+        <blockquote class="quote-card">
           {why.data.calloutTitle && (
             <span class="block text-sm font-semibold uppercase tracking-[0.28em] text-btr-accent">
               {why.data.calloutTitle}
@@ -78,12 +97,13 @@ const partnerLogos = [
     id={process.data.section}
     eyebrow={process.data.eyebrow}
     heading={process.data.heading}
+    flushTop
   >
     <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
       <div class="space-y-6">
         <ProcessContent />
         {process.data.quote && (
-          <blockquote class="rounded-3xl border border-btr-accent/20 bg-btr-muted/40 p-6 text-center text-xl font-semibold italic text-btr-text/80">
+          <blockquote class="quote-card">
             “{process.data.quote}”
           </blockquote>
         )}
@@ -96,6 +116,7 @@ const partnerLogos = [
     id={about.data.section}
     eyebrow={about.data.eyebrow}
     heading={about.data.heading}
+    background="muted"
   >
     <AboutContent />
     {about.data.logos && (
@@ -109,7 +130,7 @@ const partnerLogos = [
     id={proof.data.section}
     eyebrow={proof.data.eyebrow}
     heading={proof.data.heading}
-    background="muted"
+    flushTop
   >
     <div class="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-start">
       <div class="space-y-6 text-btr-text/80">

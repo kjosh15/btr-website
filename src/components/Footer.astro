@@ -1,24 +1,45 @@
 ---
 const { locale } = Astro.props;
-const contact = locale.footer?.contact ?? [];
 const legal = locale.footer?.legal ?? [];
+const footerStatement =
+  locale.footer?.statement ?? 'Sovereign AI strategy, partnerships, and planning.';
+const footerTagline = locale.footer?.tagline ?? 'Strategy · Partnerships · Delivery';
 ---
-<footer class="mt-20 bg-btr-cta text-white">
-  <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12 md:flex-row md:items-center md:justify-between">
-    <ul class="space-y-2 text-base">
-      {legal.concat(contact).map((item) => (
-        <li>
-          <a
-            href={item.href}
-            class="transition-colors hover:text-btr-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
-          >
-            {item.label}
-          </a>
-        </li>
-      ))}
-    </ul>
-    <p class="text-sm text-white/70">
-      {locale.footer?.copyright ?? '© BTR ehf'}
-    </p>
+<footer class="mt-20 border-t border-btr-muted bg-[#050b16] text-white">
+  <div class="mx-auto grid max-w-6xl gap-10 px-6 py-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-start">
+    <div class="space-y-4">
+      <div class="inline-flex items-center gap-4">
+        <img
+          src="/brand/btr-icon.png"
+          alt="BTR.is logo"
+          class="h-14 w-14 rounded-2xl border border-white/10 bg-white object-cover shadow-lg"
+          width="56"
+          height="56"
+          loading="lazy"
+        />
+        <div>
+          <p class="text-lg font-semibold uppercase tracking-[0.3em]">BTR.is</p>
+          <p class="text-sm text-white/60">{footerTagline}</p>
+        </div>
+      </div>
+      <p class="max-w-xl text-sm leading-relaxed text-white/70">
+        {footerStatement}
+      </p>
+    </div>
+    <div class="flex flex-col items-start sm:items-end">
+      <ul class="space-y-2 text-sm text-white/80 text-left sm:text-right">
+        {legal.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-btr-accent"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-6 text-xs text-white/55">{locale.footer?.copyright ?? '© BTR ehf'}</p>
+    </div>
   </div>
 </footer>

@@ -1,10 +1,11 @@
 ---
 section: hero
-headline: "[TODO] Þróum fullveldislegar AI-áætlanir"
+headline: "Fullveldis-AI: Stefna fyrir þjóðir og stofnanir"
 subheadline: >
-  [TODO] Icelandic translation pending. Replace this text with the approved Icelandic hero copy.
+  BTR hjálpar stjórnvöldum og stofnunum að skilgreina hvernig gervigreind á að þjóna fólki landsins—við snúum innlendu samhengi í skýrar, framkvæmanlegar áætlanir sem traustir samstarfsaðilar geta innleitt. Við höldum beinu sambandi við fremstu módel- og skýjaveitendur, setjum stefnu í forgang, keyrum tilraunaverkefni þegar þau staðfesta eða betrumbæta stefnu og leiðum síðan innleiðingu með samstilltu samstarfi.
+supportLine: Mótað á Íslandi. Nú í þjónustu fleiri ríkja.
 primaryCtas:
-  - label: "[TODO] Hafa samband við BTR"
+  - label: Hefja samtal
     href: "#connect"
     variant: primary
 ---

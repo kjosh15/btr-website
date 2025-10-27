@@ -6,6 +6,7 @@ const {
   support,
   children,
   background = 'light',
+  flushTop = false,
 } = Astro.props;
 
 const backgroundClass =
@@ -18,10 +19,11 @@ const headingClass = background === 'accent' ? 'text-white' : 'text-btr-text';
 const eyebrowClass = background === 'accent' ? 'text-white/70' : 'text-btr-text/60';
 const supportClass =
   background === 'accent' ? 'text-base text-white/80' : 'text-base text-btr-text/80';
+const topSpacingClass = flushTop ? '' : 'mt-8';
 const contentClass =
   background === 'accent'
-    ? 'rich-text mt-8 space-y-6 text-base leading-relaxed text-white/85 [&_*:not(code)]:text-inherit [&_strong]:text-white'
-    : 'rich-text mt-8 space-y-6 text-base leading-relaxed text-btr-text';
+    ? `rich-text ${topSpacingClass} space-y-6 text-base leading-relaxed text-white/85 [&_*:not(code)]:text-inherit [&_strong]:text-white`.trim()
+    : `rich-text ${topSpacingClass} space-y-6 text-base leading-relaxed text-btr-text`.trim();
 ---
 <section id={id} class={`${backgroundClass} py-16 sm:py-20`}>
   <div class="mx-auto max-w-6xl space-y-8 px-6">

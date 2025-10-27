@@ -89,4 +89,8 @@
   .surface-card {
     @apply rounded-3xl border border-btr-muted bg-white p-7 shadow-sm;
   }
+
+  .quote-card {
+    @apply rounded-3xl border border-btr-accent/20 bg-white/95 p-8 text-center text-2xl font-semibold leading-snug italic text-btr-text/80 shadow-sm;
+  }
 }

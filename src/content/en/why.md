@@ -3,22 +3,22 @@ section: why
 heading: Every nation needs a strategy before it builds.
 eyebrow: Why Sovereign AI Matters Now
 stats:
-  - value: "120+"
-    label: "countries have published or are drafting AI strategies"
-    source: "OECD, 2024"
-    sourceUrl: "https://oecd.ai/en/strategies"
-  - value: "10%"
-    label: "of public-sector AI projects succeed without strategic guidance"
-    source: "World Bank, 2023"
-    sourceUrl: "https://www.worldbank.org/en/topic/governance/brief/govtech-maturity-index"
-  - value: "70%"
-    label: "of digital ministries cite data governance and vendor lock-in as top risks"
-    source: "UN E-Government Survey, 2024"
-    sourceUrl: "https://publicadministration.un.org/egovkb/en-us/Reports/UN-E-Government-Survey-2022"
-  - value: "2×"
-    label: "Acceleration of private-sector AI adoption year over year"
-    source: "McKinsey State of AI, 2023"
-    sourceUrl: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-breakout-year"
+  - value: "123"
+    label: "countries co-sponsored the UN’s first AI safety resolution in March 2024"
+    source: "Associated Press"
+    sourceUrl: "https://apnews.com/article/8079fe83111cced0f0717fdecefffb4d"
+  - value: "188"
+    label: "governments benchmarked for AI readiness in the 2024 Oxford Insights index"
+    source: "Oxford Insights"
+    sourceUrl: "https://oxfordinsights.com/ai-readiness/ai-readiness-index/"
+  - value: "59%"
+    label: "OECD governments have a public-sector data strategy; just 56% of agencies use shared interoperability systems"
+    source: "OECD Digital Government Index 2023"
+    sourceUrl: "https://www.oecd.org/content/dam/oecd/en/publications/reports/2024/01/2023-oecd-digital-government-index_b11e8e8e/1a89ed5e-en.pdf"
+  - value: "65%"
+    label: "organizations already deploy generative AI in at least one function—roughly double 2023 adoption"
+    source: "McKinsey State of AI 2024"
+    sourceUrl: "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024"
 calloutTitle: Strategy is the system.
 calloutBody: Pilots should serve strategy—not replace it.
 ---

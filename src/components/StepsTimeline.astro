@@ -7,17 +7,17 @@ type Step = {
 const { steps = [] }: { steps: Step[] } = Astro.props;
 ---
 {steps.length > 0 && (
-  <ol class="process-timeline relative space-y-8">
+  <ol class="process-timeline relative space-y-4">
     {steps.map((step, index) => {
       const order = index + 1;
       return (
-        <li class="relative pl-12">
-          <span class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full bg-btr-accent text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white">
+        <li class="relative pl-10">
+          <span class="absolute left-0 top-0 flex h-7 w-7 items-center justify-center rounded-full bg-btr-accent text-[0.6rem] font-semibold uppercase tracking-[0.2em] text-white">
             {order}
           </span>
-          <div class="rounded-2xl border border-btr-muted bg-white/90 p-4 shadow-sm transition hover:-translate-y-1 hover:border-btr-accent/30 hover:shadow-md">
-            <p class="text-sm font-semibold text-btr-text">Phase {order}: {step.title}</p>
-            <p class="mt-2 text-sm leading-relaxed text-btr-text/75">{step.description}</p>
+          <div class="rounded-2xl border border-btr-muted bg-white/90 px-3.5 py-2.5 text-left shadow-sm transition hover:-translate-y-1 hover:border-btr-accent/30 hover:shadow-md sm:px-4 sm:py-3">
+            <p class="text-sm font-semibold leading-tight text-btr-text">Phase {order}: {step.title}</p>
+            <p class="mt-1 text-sm leading-snug text-btr-text/75">{step.description}</p>
           </div>
         </li>
       );
@@ -29,9 +29,9 @@ const { steps = [] }: { steps: Step[] } = Astro.props;
 .process-timeline::before {
   content: '';
   position: absolute;
-  left: 1.2rem;
-  top: 0.75rem;
-  bottom: 0.75rem;
+  left: 1.1rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
   width: 2px;
   background: linear-gradient(to bottom, rgba(31, 117, 203, 0.3), rgba(31, 117, 203, 0.05));
 }
@@ -39,10 +39,10 @@ const { steps = [] }: { steps: Step[] } = Astro.props;
 .process-timeline li::after {
   content: '';
   position: absolute;
-  left: 1.5rem;
-  top: 0.9rem;
-  width: 12px;
-  height: 12px;
+  left: 1.35rem;
+  top: 0.8rem;
+  width: 10px;
+  height: 10px;
   border-radius: 9999px;
   background-color: #1f75cb;
   opacity: 0.18;

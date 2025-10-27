@@ -1,14 +1,16 @@
 ---
 section: proof
-eyebrow: "[TODO] Sannanir aðferðarinnar"
-heading: "[TODO] Frá tilraunum til þjóðarverkefna."
+eyebrow: Sannanir aðferðarinnar
+heading: Frá tilraunum til þjóðarverkefna.
 cta:
-  label: "[TODO] Sækja Fullveldis-AI líkanið (PDF)"
+  label: Sækja fullveldis-AI módelið (PDF)
   href: "/pdfs/BTR_Sovereign_AI_Model.pdf"
 cases:
-  - title: "[TODO] Tilvik 1"
-    summary: "[TODO] Lýsing verður bætt við."
-  - title: "[TODO] Tilvik 2"
-    summary: "[TODO] Lýsing verður bætt við."
+  - title: Ísland — Gervigreind fyrir kennara
+    summary: Samstilltum ráðuneyti, kennara og tækni­samtök til að móta eina fyrstu þjóðaráætlunina um ábyrga notkun AI í kennslustofum. Tilraunaverkefnið er nú notað sem grunnur að víðtækri fullveldisstefnu á Íslandi.
+    tag: Menntamál
+  - title: Zanzibar — Þjóðleg AI stefna
+    summary: Samritum þjóðlega AI stefnu og hæfniáætlun sem jarð­bindur nýtingu tækni í sjálfbærum þróunarmarkmiðum eyjaríkis.
+    tag: Þjóðarstefna
 ---
-[TODO] Icelandic case studies will be inserted here. Use markdown headings for each geography once ready.
+Umfram tilraunir hönnum við kerfin sem tryggja að niðurstöður verði í takt við þjóðarlega forgangsröðun. Verkefnin ná yfir menntun, vinnumarkað, stjórnkerfi og getuuppbyggingu. Við viðhöldum víðtæku safni raunverulegra samstarfsverkefna sem sýnir hvernig ráðuneyti, deildir og fyrirtæki geta nýtt AI til að taka stökk—byggt á innleiddum dæmum. Sovereign AI Model BTR fangar aðferðafræðina frá uppgötvun til framkvæmdar.

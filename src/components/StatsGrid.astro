@@ -17,15 +17,20 @@ const { stats = [] }: { stats: Stat[] } = Astro.props;
           <p class="text-sm font-medium text-btr-text/80">{stat.label}</p>
         </div>
         {stat.source && (
-          <p class="mt-4 text-[0.65rem] font-semibold uppercase tracking-[0.32em] text-btr-text/40">
+          <p class="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-btr-text/50">
+            <span class="mr-1 text-btr-text/40">Source:</span>
             {stat.sourceUrl ? (
               <a
                 href={stat.sourceUrl}
-                class="underline decoration-dotted underline-offset-2 hover:text-btr-accent"
+                class="inline-flex items-center gap-1 text-btr-text/70 underline decoration-dotted underline-offset-2 transition hover:text-btr-accent"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View citation for ${stat.label}`}
               >
                 {stat.source}
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M7.5 4a.5.5 0 0 0 0 1h5.793L5.146 13.146a.5.5 0 1 0 .708.708L14 5.707V11.5a.5.5 0 0 0 1 0V4.5a.5.5 0 0 0-.5-.5H7.5Z" />
+                </svg>
               </a>
             ) : (
               stat.source
