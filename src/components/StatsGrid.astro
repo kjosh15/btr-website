@@ -6,7 +6,15 @@ type Stat = {
   sourceUrl?: string;
 };
 
-const { stats = [] }: { stats: Stat[] } = Astro.props;
+const {
+  stats = [],
+  sourceLabel = 'Source',
+  sourceAriaPrefix = 'View citation for',
+}: {
+  stats: Stat[];
+  sourceLabel?: string;
+  sourceAriaPrefix?: string;
+} = Astro.props;
 ---
 {stats.length > 0 && (
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -18,14 +26,14 @@ const { stats = [] }: { stats: Stat[] } = Astro.props;
         </div>
         {stat.source && (
           <p class="mt-5 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-btr-text/50">
-            <span class="mr-1 text-btr-text/40">Source:</span>
+            <span class="mr-1 text-btr-text/40">{sourceLabel}:</span>
             {stat.sourceUrl ? (
               <a
                 href={stat.sourceUrl}
                 class="inline-flex items-center gap-1 text-btr-text/70 underline decoration-dotted underline-offset-2 transition hover:text-btr-accent"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View citation for ${stat.label}`}
+                aria-label={`${sourceAriaPrefix} ${stat.label}`}
               >
                 {stat.source}
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">

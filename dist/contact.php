@@ -7,6 +7,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $required = ['name', 'role', 'organization', 'email', 'interest'];
+$lang = strtolower(trim((string)($_POST['lang'] ?? 'en')));
+if (!in_array($lang, ['en', 'is'], true)) {
+    $lang = 'en';
+}
 $data = [];
 foreach (['name', 'role', 'organization', 'email', 'interest', 'timeline', 'notes'] as $field) {
     $value = trim(filter_input(INPUT_POST, $field, FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '');
@@ -48,11 +52,28 @@ foreach ($headers as $key => $value) {
     $headersString .= $key . ': ' . $value . "\r\n";
 }
 
+$strings = [
+    'is' => [
+        'successTitle' => 'Takk fyrir!',
+        'successBody' => 'Skilaboðin þín hafa verið móttekin og við svörum eins fljótt og auðið er.',
+        'errorTitle' => 'Villa kom upp',
+        'errorBody' => 'Vinsamlegast reyndu aftur eða sendu okkur línu á <a href="mailto:josh@josh.is">josh@josh.is</a>.',
+        'backLabel' => 'Til baka á síðuna',
+    ],
+    'en' => [
+        'successTitle' => 'Thank you!',
+        'successBody' => 'Your message has been received and we will reply as soon as possible.',
+        'errorTitle' => 'Something went wrong',
+        'errorBody' => 'Please try again or email us at <a href="mailto:josh@josh.is">josh@josh.is</a>.',
+        'backLabel' => 'Back to the site',
+    ],
+];
+
+$languageStrings = $strings[$lang];
+
 $success = empty($errors) ? mail($to, $subject, $body, $headersString) : false;
-$statusTitle = $success ? 'Takk fyrir!' : 'Villa kom upp';
-$statusBody = $success
-    ? 'Skilaboðin þín hafa verið móttekin og við svörum eins fljótt og auðið er. / Your message has been received and we will reply as soon as possible.'
-    : 'Vinsamlegast reyndu aftur eða sendu okkur línu á <a href="mailto:josh@josh.is">josh@josh.is</a>. / Please try again or email us directly.';
+$statusTitle = $success ? $languageStrings['successTitle'] : $languageStrings['errorTitle'];
+$statusBody = $success ? $languageStrings['successBody'] : $languageStrings['errorBody'];
 
 if (!$success && empty($errors)) {
     $errors[] = 'mail';
@@ -60,7 +81,7 @@ if (!$success && empty($errors)) {
 
 ?>
 <!DOCTYPE html>
-<html lang="is">
+<html lang="<?php echo htmlspecialchars($lang); ?>">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -118,7 +139,7 @@ if (!$success && empty($errors)) {
   <div class="card">
     <h1><?php echo htmlspecialchars($statusTitle); ?></h1>
     <p><?php echo $statusBody; ?></p>
-    <a class="btn" href="/#connect">Til baka á síðuna</a>
+    <a class="btn" href="/#connect"><?php echo $languageStrings['backLabel']; ?></a>
   </div>
 </body>
 </html>

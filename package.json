@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "astro check"
+    "lint": "astro check",
+    "deploy": "npm run build && rsync -av --delete dist/ dh_5mmegi@iad1-shared-b8-15.dreamhost.com:/home/dh_5mmegi/btr.is/"
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",

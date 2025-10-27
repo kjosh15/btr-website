@@ -3,6 +3,20 @@
     "title": "BTR — Fullveldisstefna fyrir gervigreind",
     "description": "BTR styður stjórnvöld og stofnanir við að móta og innleiða fullveldislega AI stefnu sem byggir á þjóðlegu samhengi, öruggum gögnum og traustu samstarfi."
   },
+  "lang": "is",
+  "stats": {
+    "sourceLabel": "Heimild",
+    "sourceAriaPrefix": "Skoða heimild fyrir"
+  },
+  "hero": {
+    "cardTitle": "Stefna, tilraunir og samstarf í takt.",
+    "cardSubtitle": "Við þýðum þjóðarleg markmið í lifandi verk­lýsingu, staðfestum með gagnadrifnum tilraunum og samhæfum samstarfsaðila svo innleiðingarteymi—frá ráðuneytum til fremstu módelveitenda—vinni eftir sömu sýn frá fyrsta degi.",
+    "cardBullets": [
+      "Stefnuskjöl sem festa þjóðarlega stefnu, gagnavernd og áhættustýringu í sessi.",
+      "Tilraunaverkefni sem staðfesta stefnu og safna gögnum áður en lausnir eru skalaðar.",
+      "Samstarfsstýring sem tryggir að tækni­aðilar fylgi fullveldislegum markmiðum."
+    ]
+  },
   "nav": [
     { "id": "hero", "label": "Yfirlit" },
     { "id": "why", "label": "Af hverju" },

@@ -1,14 +1,14 @@
 ---
 section: partners
-eyebrow: "[TODO] Fyrir tækniaðila og stofnanir"
-heading: "[TODO] Þar sem stefna og framkvæmd mætast."
+eyebrow: Fyrir tækniaðila og stofnanir
+heading: Þar sem stefna og framkvæmd mætast.
 cta:
-  label: "[TODO] Hefja samstarf"
+  label: Hefja samstarf
   href: "#connect"
 benefits:
-  - "[TODO] Ávinningur 1"
-  - "[TODO] Ávinningur 2"
-  - "[TODO] Ávinningur 3"
-  - "[TODO] Ávinningur 4"
+  - Skýr verk­lýsing og krafa­setning sem fjar­lægir óvissu í tilboðum og ráðningum.
+  - Sameiginleg tilraunaverkefni sem sanna virði og skapa sameiginleg gögn fyrir næstu skref.
+  - Jafnvægi milli nýsköpunar og stjórnarhátta sem uppfyllir kröfur stjórnvalda.
+  - Samhæfing með ráðuneytum og stofnunum sem tryggir langtímasamstarf.
 ---
-[TODO] Icelandic partner-facing copy to be provided.
+Við hjálpum tæknifyrirtækjum og stofnunum að komast inn í fullveldisleg AI verkefni með gagnsæi og sameiginlegum markmiðum. Með skýrri stefnu og mælikvörðum verður samstarfið skilvirkara og árangur mælanlegur.

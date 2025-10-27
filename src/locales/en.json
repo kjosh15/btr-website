@@ -34,6 +34,20 @@
     "label": "Íslenska",
     "ariaLabel": "Switch to Icelandic"
   },
+  "lang": "en",
+  "stats": {
+    "sourceLabel": "Source",
+    "sourceAriaPrefix": "View citation for"
+  },
+  "hero": {
+    "cardTitle": "Strategy, pilots, and partners stay in lockstep.",
+    "cardSubtitle": "We translate national priorities into living specifications, validate with evidence-driven pilots, and coordinate trusted partners so delivery teams—from ministries to frontier model vendors—are aligned from day one.",
+    "cardBullets": [
+      "Blueprints that codify sovereign policy, data stewardship, and risk controls.",
+      "Pilot programmes designed to prove strategy and surface evidence before scale.",
+      "Partner governance that keeps strategic partners aligned to sovereign objectives."
+    ]
+  },
   "forms": {
     "combined": {
       "title": "",

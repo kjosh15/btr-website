@@ -30,24 +30,27 @@ _Last updated: October 26, 2025_
 ## Deployment Workflow (DreamHost GitOps)
 1. **Server prep (already done)**:
    - Bare repo at `~/git/btr-site.git`.
-   - Worktree at `~/git/btr-site-work`.
-   - `post-receive` hook resets the worktree, runs `npm install && npm run build`, and `rsync`s `dist/` to `/home/dh_5mmegi/btr.is`.
-   - Node 18 installed via `nvm`, default alias set.
+   - Worktree at `~/git/btr-site-work` (used for reference only).
+   - `post-receive` hook reset/rsyncs the repo but does **not** run builds anymore.
+   - Node 18 remains available via `nvm` if needed.
 2. **Local setup**:
    ```bash
    git remote add dreamhost dh_5mmegi@iad1-shared-b8-15.dreamhost.com:~/git/btr-site.git
    ```
-3. **Deploy**:
+3. **Deploy** (build locally, upload with deploy script):
    ```bash
+   npm run deploy        # builds and rsyncs dist/ to DreamHost
+   git add .
+   git commit -m "Your message"
+   git push origin main  # optional: keep remote repo in sync
    git push dreamhost main
    ```
-   The hook builds the site and copies it to the live web root automatically.
 
-_Tip_: Keep pushing to `origin` (GitHub/GitLab) for backups, and push to `dreamhost` only when you want to publish.
+_Tip_: `npm run deploy` runs `astro build` and then `rsync -av --delete dist/ dh_5mmegi@iad1-shared-b8-15.dreamhost.com:/home/dh_5mmegi/btr.is/`. Update the command if the path changes.
 
 ## Next Steps
-- Wire the contact form to a real email endpoint (DreamHost CGI, Formspree, Netlify, etc.) and update `form.action`.
-- Confirm DNS for `btr.is` points to the current DreamHost plan.
-- Consider automating deployments via GitHub Actions if you prefer building locally and uploading `dist/` rather than compiling on DreamHost.
+- Monitor the contact form mailbox (josh@josh.is) and adjust the PHP handler if you want logs or alternative destinations.
+- Keep DNS for `btr.is` pointing at DreamHost; no additional configuration needed.
+- Optional: add a GitHub Action to call `npm run deploy` automatically if you prefer CI-driven deployments.
 
-For any future contributors, start by reading this file, then run `npm install` and `npm run dev` to work locally. Push to `main`, then `git push dreamhost main` to publish.***
+For any future contributors, start by reading this file, then run `npm install` and `npm run dev` to work locally. When you’re ready to publish, run `npm run deploy` followed by the Git pushes above.

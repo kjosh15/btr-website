@@ -1,19 +1,19 @@
 ---
 section: offerings
-eyebrow: "[TODO] Getur"
-heading: "[TODO] Ein sameiginleg nálgun fyrir stjórnvöld og samstarfsaðila"
+eyebrow: Hæfni
+heading: Ein fullveldisleg AI áætlun fyrir opinberar stofnanir og samstarfsaðila
 audiences:
-  - title: "[TODO] Stjórnvöld og alþjóðastofnanir"
-    summary: "[TODO] Lýsing verður bætt við."
+  - title: Stjórnvöld og fjölþjóðastofnanir
+    summary: Sjálfstæður samstarfsaðili sem tryggir að gervigreind styðji þjóðarleg markmið, gagnavernd og traust almennings.
     points:
-      - "[TODO] Atriði 1"
-      - "[TODO] Atriði 2"
-      - "[TODO] Atriði 3"
-  - title: "[TODO] Tækniaðilar og stofnanir"
-    summary: "[TODO] Lýsing verður bætt við."
+      - Þjóðlegar AI stefnur sem samhæfa ráðuneyti, gagnastjórnun og siðferðileg viðmið.
+      - Tilraunaverkefni sem staðfesta stefnu áður en lausnir eru skalaðar og safna gögnum fyrir ákvarðanatöku.
+      - Viðvarandi stjórnun sem heldur innleiðingu söluaðilahlutlausri en undir stjórn stofnunarinnar.
+  - title: Tæknifyrirtæki og stofnanir
+    summary: Skýr akburður inn í fullveldisleg AI verkefni með gagnsæjum verk­lýsingum og sameiginlegum mælikvörðum.
     points:
-      - "[TODO] Atriði 1"
-      - "[TODO] Atriði 2"
-      - "[TODO] Atriði 3"
+      - Tilboð sem byggja á gagnsæjum kröfum og takmarka óvissu í innleiðingu.
+      - Samstillt vinna með opinberum aðilum þar sem hver tilraun styður mælanleg markmið.
+      - Stjórnun og samhæfing sem heldur samstarfinu á réttum brautum til langframa.
 ---
-[TODO] Bæta við íslenskri lýsingu um sameiginlega nálgun.
+BTR stillir stefnu og verkefni saman svo opinberar stofnanir og tækniaðilar vinni eftir sömu verk­lýsingu. Nálgunin tryggir að hver innleiðing styðji fullveldisleg markmið án þess að fórna hraða eða gæðum.

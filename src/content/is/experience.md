@@ -1,14 +1,20 @@
 ---
 section: experience
-eyebrow: "[TODO] Reynslan sem mótaði BTR"
-heading: "[TODO] Reynslan sem mótaði BTR"
-caption: "[TODO] Valdar samstarfsstofnanir verða skráðar hér."
+eyebrow: Reynslan sem mótaði BTR
+heading: Reynslan sem mótaði BTR
+caption: Valdir samstarfsaðilar úr sjálfstæðri ráðgjöf Josh Klein.
 logos:
-  - name: "[TODO] Logo 1"
-    file: "unesco.svg"
-  - name: "[TODO] Logo 2"
-    file: "world-bank.svg"
-  - name: "[TODO] Logo 3"
-    file: "mit-media-lab.svg"
+  - name: UNESCO
+    file: unesco.svg
+  - name: Alþjóðabankinn
+    file: world-bank.svg
+  - name: MIT Media Lab
+    file: mit-media-lab.svg
+  - name: OECD
+    file: oecd.svg
+  - name: Háskólinn í Reykjavík
+    file: reykjavik-university.svg
+  - name: UNDP
+    file: undp.svg
 ---
-[TODO] Add localized narrative describing the experiential foundation.
+Grunnur BTR er byggður á samstarfi við tækni, menntastofnanir og opinbera stefnumótun víða um heim. Þessi verkefni mótuðu aðferðafræðina og trúverðugleikann sem liggur að baki fullveldislegum AI lausnum BTR.
