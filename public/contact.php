@@ -29,7 +29,7 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
 }
 
 $to = 'josh@josh.is';
-$fromAddress = 'web@btr.is';
+$fromAddress = 'contact@btr.is';
 $subject = 'New inquiry from BTR.is';
 
 ini_set('sendmail_from', $fromAddress);
