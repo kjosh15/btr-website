@@ -48,14 +48,16 @@ const mandateHeading = mandateHeadingBase.replace(/[:;]*$/, '') + ';';
 const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
 ---
 <BaseLayout lang="is" locale={locale} navItems={navItems} alternate={alternate} meta={locale.meta}>
-  <Hero data={hero.data} />
+<Hero data={hero.data} strings={locale.hero} />
 
   <Section
     id="partners"
-    eyebrow="[TODO] Samstarfsaðilar"
-    heading="[TODO] Samstarf við fremstu AI vettvanga"
+    eyebrow="Stefnumótandi samstarf"
+    heading="Samstarf við fremstu AI vistkerfin"
   >
-    <p class="text-btr-text/75">[TODO] Bæta við íslenskum texta um virkt samstarf við OpenAI, Anthropic, Google Cloud, AWS og NVIDIA.</p>
+    <p class="text-btr-text/75">
+      Við viðhöldum virku samstarfi, trúnaðarsamningum og reglulegum verkefnafundum með leiðandi módel- og skýjaaðilum á borð við OpenAI, Anthropic, Google Cloud, AWS og NVIDIA svo stefna, tilraunir og innleiðing haldist í takt.
+    </p>
     <div class="mt-8"><PartnerCarousel logos={partnerLogos} /></div>
   </Section>
 
@@ -65,7 +67,13 @@ const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
     heading={why.data.heading}
     background="muted"
   >
-    {why.data.stats && <StatsGrid stats={why.data.stats} />}
+    {why.data.stats && (
+      <StatsGrid
+        stats={why.data.stats}
+        sourceLabel={locale.stats.sourceLabel}
+        sourceAriaPrefix={locale.stats.sourceAriaPrefix}
+      />
+    )}
     <div class="mt-8 space-y-6">
       <WhyContent />
       {(why.data.calloutTitle || why.data.calloutBody) && (
@@ -149,7 +157,7 @@ const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
   >
     <EngageContent />
     <div class="mt-8">
-      <ContactForm id="connect" form={locale.forms.combined} />
+      <ContactForm id="connect" form={locale.forms.combined} lang={locale.lang ?? 'is'} />
     </div>
     {engage.data.actions && (
       <div class="mt-12">

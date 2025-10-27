@@ -48,7 +48,7 @@ const mandateHeading = mandateHeadingBase.replace(/[:;]*$/, '') + ';';
 const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
 ---
 <BaseLayout lang="en" locale={locale} navItems={navItems} alternate={alternate} meta={locale.meta}>
-  <Hero data={hero.data} />
+<Hero data={hero.data} strings={locale.hero} />
 
   <Section
     id="partners"
@@ -77,7 +77,13 @@ const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
     heading={why.data.heading}
     background="muted"
   >
-    {why.data.stats && <StatsGrid stats={why.data.stats} />}
+    {why.data.stats && (
+      <StatsGrid
+        stats={why.data.stats}
+        sourceLabel={locale.stats.sourceLabel}
+        sourceAriaPrefix={locale.stats.sourceAriaPrefix}
+      />
+    )}
     <div class="mt-8 space-y-6">
       <WhyContent />
       {(why.data.calloutTitle || why.data.calloutBody) && (
@@ -151,7 +157,7 @@ const mandateBody = hasMandateSplit ? mandateRest.join(':').trim() : rawMandate;
   >
     <EngageContent />
     <div class="mt-8">
-      <ContactForm id="connect" form={locale.forms.combined} />
+      <ContactForm id="connect" form={locale.forms.combined} lang={locale.lang ?? 'en'} />
     </div>
     {engage.data.actions && (
       <div class="mt-12">
