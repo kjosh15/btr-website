@@ -769,32 +769,33 @@
           <p class="text-[#1a1a2e]/75">Let's discuss how BTR can support your strategic objectives.</p>
         </div>
 
-        <form class="rounded-2xl border border-[#e8edf4] bg-[#e8edf4]/30 p-8 space-y-6">
+        <form method="post" action="/contact.php" class="rounded-2xl border border-[#e8edf4] bg-[#e8edf4]/30 p-8 space-y-6">
           <div class="grid gap-6 md:grid-cols-2">
             <div>
               <label class="block text-sm font-medium text-[#1a1a2e] mb-2" for="name">Name *</label>
-              <input type="text" id="name" name="name" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm">
+              <input type="text" id="name" name="name" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm focus:border-[#1f75cb] focus:ring-2 focus:ring-[#1f75cb]/30 outline-none transition">
             </div>
             <div>
               <label class="block text-sm font-medium text-[#1a1a2e] mb-2" for="role">Role / Title *</label>
-              <input type="text" id="role" name="role" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm">
+              <input type="text" id="role" name="role" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm focus:border-[#1f75cb] focus:ring-2 focus:ring-[#1f75cb]/30 outline-none transition">
             </div>
           </div>
           <div class="grid gap-6 md:grid-cols-2">
             <div>
               <label class="block text-sm font-medium text-[#1a1a2e] mb-2" for="organization">Organization *</label>
-              <input type="text" id="organization" name="organization" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm">
+              <input type="text" id="organization" name="organization" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm focus:border-[#1f75cb] focus:ring-2 focus:ring-[#1f75cb]/30 outline-none transition">
             </div>
             <div>
               <label class="block text-sm font-medium text-[#1a1a2e] mb-2" for="email">Work Email *</label>
-              <input type="email" id="email" name="email" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm">
+              <input type="email" id="email" name="email" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm focus:border-[#1f75cb] focus:ring-2 focus:ring-[#1f75cb]/30 outline-none transition">
             </div>
           </div>
           <div>
             <label class="block text-sm font-medium text-[#1a1a2e] mb-2" for="interest">How can BTR help? *</label>
-            <textarea id="interest" name="interest" rows="4" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm"></textarea>
+            <textarea id="interest" name="interest" rows="4" required class="w-full rounded-lg border border-[#e8edf4] bg-white px-4 py-3 text-sm focus:border-[#1f75cb] focus:ring-2 focus:ring-[#1f75cb]/30 outline-none transition"></textarea>
           </div>
-          <button type="submit" class="w-full rounded-xl bg-[#1f75cb] px-6 py-4 text-sm font-semibold text-white hover:bg-[#1a5fa3]">
+          <input type="hidden" name="lang" value="en">
+          <button type="submit" class="w-full rounded-xl bg-[#1f75cb] px-6 py-4 text-sm font-semibold text-white hover:bg-[#1a5fa3] transition">
             Request Consultation
           </button>
         </form>
