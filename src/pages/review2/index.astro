@@ -1007,12 +1007,29 @@
     document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.accordion-trigger').forEach(trigger => {
         trigger.addEventListener('click', function() {
-          const content = this.nextElementSibling;
-          const isOpen = this.classList.contains('open');
+          const group = this.dataset.group;
 
-          // Toggle current accordion
-          this.classList.toggle('open');
-          content.classList.toggle('open');
+          if (group) {
+            // Grouped accordion - toggle all in group together
+            const allInGroup = document.querySelectorAll(`[data-group="${group}"]`);
+            const isOpen = this.classList.contains('open');
+
+            allInGroup.forEach(t => {
+              const content = t.nextElementSibling;
+              if (isOpen) {
+                t.classList.remove('open');
+                content.classList.remove('open');
+              } else {
+                t.classList.add('open');
+                content.classList.add('open');
+              }
+            });
+          } else {
+            // Single accordion
+            const content = this.nextElementSibling;
+            this.classList.toggle('open');
+            content.classList.toggle('open');
+          }
         });
       });
     });
