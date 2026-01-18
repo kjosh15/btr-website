@@ -1052,5 +1052,21 @@
     </div>
   </footer>
 
+  <!-- Accordion JavaScript -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          const content = this.nextElementSibling;
+          const isOpen = this.classList.contains('open');
+
+          // Toggle current accordion
+          this.classList.toggle('open');
+          content.classList.toggle('open');
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
