@@ -47,6 +47,47 @@
       font-weight: 500;
       color: rgba(26,26,46,0.7);
     }
+    /* Accordion styles */
+    .accordion-trigger {
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+    .accordion-trigger:hover {
+      opacity: 0.85;
+    }
+    .accordion-trigger::after {
+      content: '+';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: auto;
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #1f75cb;
+      transition: transform 0.2s ease;
+    }
+    .accordion-trigger.open::after {
+      content: '−';
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+      opacity: 0;
+    }
+    .accordion-content.open {
+      max-height: 2000px;
+      opacity: 1;
+      transition: max-height 0.4s ease-in, opacity 0.3s ease-in;
+    }
+    .accordion-summary {
+      font-size: 0.75rem;
+      color: rgba(26,26,46,0.5);
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body class="antialiased bg-white text-[#1a1a2e]">
