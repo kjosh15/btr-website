@@ -12,7 +12,7 @@ if (!in_array($lang, ['en', 'is'], true)) {
     $lang = 'en';
 }
 $data = [];
-foreach (['name', 'role', 'organization', 'email', 'interest', 'timeline', 'notes'] as $field) {
+foreach (['name', 'role', 'organization', 'email', 'inquiry_type', 'interest', 'timeline', 'notes'] as $field) {
     $value = trim(filter_input(INPUT_POST, $field, FILTER_SANITIZE_FULL_SPECIAL_CHARS) ?? '');
     $data[$field] = $value;
 }
