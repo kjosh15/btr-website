@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: /#connect');
+    header('Location: /#contact');
     exit;
 }
 
@@ -161,7 +161,7 @@ if (!$success && empty($errors)) {
   <div class="card">
     <h1><?php echo htmlspecialchars($statusTitle); ?></h1>
     <p><?php echo $statusBody; ?></p>
-    <a class="btn" href="/#connect"><?php echo $languageStrings['backLabel']; ?></a>
+    <a class="btn" href="/#contact"><?php echo $languageStrings['backLabel']; ?></a>
   </div>
 </body>
 </html>
