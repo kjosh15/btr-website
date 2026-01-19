@@ -39,6 +39,7 @@ $body = implode("\n", [
     "Role / Title: {$data['role']}",
     "Organization: {$data['organization']}",
     "Email: {$data['email']}",
+    "Inquiry Type: {$data['inquiry_type']}",
     "Interest / Request:\n{$data['interest']}",
     "Timeline: {$data['timeline']}",
     "Additional notes:\n{$data['notes']}",
